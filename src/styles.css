@@ -365,3 +365,13 @@ img{display:block;max-width:100%}
     aspect-ratio:1080 / 827!important;
   }
 }
+
+/* Os novos registros pessoais e de recuperação permanecem em cores naturais. */
+.story-chapter:nth-child(3) .story-image img,
+.story-chapter:nth-child(4) .story-image img{
+  filter:saturate(1.08) contrast(1.025)!important;
+}
+.story-chapter:nth-child(3) .story-image:hover img,
+.story-chapter:nth-child(4) .story-image:hover img{
+  filter:saturate(1.12) contrast(1.04)!important;
+}
