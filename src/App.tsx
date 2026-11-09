@@ -2,26 +2,27 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  ArrowDown,
-  ArrowUpRight,
-  Heart,
-  Copy,
-  Check,
-  Menu,
-  X,
-  MessageCircle,
-  ShieldCheck,
-  Sparkles,
+  ArrowDown, ArrowUpRight, Heart, Copy, Check, Menu, X,
+  MessageCircle, ShieldCheck, Sparkles, Quote, ChevronRight
 } from "lucide-react";
-import { campaign, storyChapters } from "./content";
+import { campaign, storySections, voiceQuotes, campaignNeeds } from "./content";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
 };
 
 function SectionLabel({ children }: { children: ReactNode }) {
   return <div className="section-label"><span />{children}</div>;
+}
+
+function StoryImage({ src, alt, caption, className = "" }: { src: string; alt: string; caption: string; className?: string }) {
+  return (
+    <figure className={`story-image ${className}`}>
+      <img src={src} alt={alt} loading="lazy" />
+      <figcaption>{caption}</figcaption>
+    </figure>
+  );
 }
 
 export default function App() {
@@ -30,13 +31,21 @@ export default function App() {
   const reduceMotion = useReducedMotion();
 
   async function copyPix() {
-    if (!campaign.pix.copyPasteCode) return;
     try {
       await navigator.clipboard.writeText(campaign.pix.copyPasteCode);
       setCopied(true);
-      window.setTimeout(() => setCopied(false), 2200);
+      window.setTimeout(() => setCopied(false), 2400);
     } catch {
-      setCopied(false);
+      const field = document.createElement("textarea");
+      field.value = campaign.pix.copyPasteCode;
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(field);
+      setCopied(ok);
+      window.setTimeout(() => setCopied(false), 2400);
     }
   }
 
@@ -49,144 +58,176 @@ export default function App() {
           <span className="wordmark-mark">V.</span>
           <span>VIVA A VIDA <b>JULIANA</b></span>
         </a>
-        <button className="menu-toggle" aria-label="Abrir menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="menu-toggle" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X /> : <Menu />}
         </button>
         <nav className={menuOpen ? "nav nav-open" : "nav"}>
-          <a href="#historia" onClick={closeMenu}>A história</a>
-          <a href="#jornada" onClick={closeMenu}>A jornada</a>
+          <a href="#minha-historia" onClick={closeMenu}>Minha história</a>
+          <a href="#jornada" onClick={closeMenu}>Minha jornada</a>
           <a href="#corrente" onClick={closeMenu}>Como ajudar</a>
-          <a className="nav-cta" href="#contribuir" onClick={closeMenu}>Fazer parte <ArrowUpRight size={15}/></a>
+          <a className="nav-cta" href="#contribuir" onClick={closeMenu}>Contribua <ArrowUpRight size={15}/></a>
         </nav>
       </header>
 
       <section className="hero" id="inicio">
-        <div className="hero-grain" />
         <div className="hero-copy">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-inner">
             <SectionLabel>{campaign.eyebrow}</SectionLabel>
-            <h1>{campaign.title.split(",")[0]},<br/><em>Juliana.</em></h1>
+            <h1>Viva a vida,<br/><em>Juliana.</em></h1>
             <div className="hero-rule"><span /></div>
-            <p className="hero-manifesto">{campaign.heroHeadline}</p>
+            <p className="hero-manifesto">“Eu já enfrentei muitas batalhas. E continuo escolhendo a vida.”</p>
             <p className="hero-description">{campaign.heroDescription}</p>
             <div className="hero-actions">
-              <a className="button button-gold" href="#contribuir">FAÇA PARTE DESSA HISTÓRIA <ArrowUpRight size={16}/></a>
-              <a className="text-link" href="#historia">CONHEÇA A JORNADA <ArrowDown size={15}/></a>
+              <a className="button button-gold" href="#contribuir">CAMINHE COMIGO <ArrowUpRight size={16}/></a>
+              <a className="text-link" href="#minha-historia">LEIA MINHA HISTÓRIA <ArrowDown size={15}/></a>
             </div>
           </motion.div>
         </div>
-        <div className={campaign.heroImage ? "hero-photo has-photo" : "hero-photo"}>
-          {campaign.heroImage ? (
-            <img src={campaign.heroImage} alt="Retrato de Juliana, publicado com sua autorização." />
-          ) : (
-            <div className="photo-placeholder">
-              <span>RETRATO AUTORIZADO DE JULIANA</span>
-              <small>O espaço está reservado para uma fotografia real escolhida por ela.</small>
-            </div>
-          )}
-          <div className="photo-caption"><span>UMA HISTÓRIA REAL</span><span>01 / 04</span></div>
+        <div className="hero-photo has-photo">
+          <img src={campaign.heroImage} alt="Juliana sorrindo ao lado de suas calopsitas." fetchPriority="high"/>
+          <div className="photo-caption"><span>EU SOU A JULIANA</span><span>MINHA HISTÓRIA, MINHA VOZ</span></div>
         </div>
-        <div className="hero-bottom"><span>DESLIZE PARA CONHECER</span><span>↓</span><span>VIVA A VIDA, JULIANA</span></div>
+        <div className="hero-bottom"><span>DESÇA E CONHEÇA MINHA JORNADA</span><span>↓</span><span>VIVA A VIDA, JULIANA</span></div>
       </section>
 
-      <section className="intro section-pad" id="historia">
-        <div className="intro-side"><SectionLabel>01 — QUEM É JULIANA</SectionLabel><span className="vertical-note">UMA VIDA INTEIRA, ALÉM DOS DESAFIOS</span></div>
-        <motion.div className="intro-photo" initial={reduceMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8 }}><img src="/images/juliana-portrait.webp" alt="Retrato de Juliana, compartilhado com autorização para a campanha."/><span>JULIANA, ALÉM DA JORNADA</span></motion.div>
+      <section className="intro section-pad" id="minha-historia">
+        <div className="intro-side">
+          <SectionLabel>01 — QUEM EU SOU</SectionLabel>
+          <span className="vertical-note">ANTES DE CADA DIAGNÓSTICO, EXISTE UMA VIDA INTEIRA</span>
+        </div>
+        <StoryImage
+          src="/images/juliana-portrait.webp"
+          alt="Retrato de Juliana em um momento pessoal."
+          caption="Eu, muito além dos capítulos difíceis."
+          className="intro-photo"
+        />
         <motion.div className="intro-content" initial={reduceMotion ? false : "hidden"} whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={fadeUp}>
-          <p className="large-serif">Antes de conhecer sua jornada de saúde, queremos que você conheça <em>a mulher.</em></p>
-          <p className="body-copy">Seus afetos, seus sonhos, sua personalidade, as coisas que a fazem sorrir e as pessoas que caminham ao seu lado. Porque nenhuma história cabe em um diagnóstico.</p>
-          <p className="pending-note">Este capítulo será escrito a partir das palavras de Juliana e das fotografias que ela escolher compartilhar.</p>
+          <p className="large-serif">Antes de conhecer minhas batalhas, quero que você conheça <em>a mulher.</em></p>
+          {storySections[0].paragraphs.map((paragraph) => <p className="body-copy" key={paragraph}>{paragraph}</p>)}
+          <p className="signature">Com carinho,<br/><strong>Juliana</strong></p>
         </motion.div>
       </section>
 
-      <section className="quote-band">
-        <div className="quote-image" aria-hidden="true"><span>FÉ&nbsp; · &nbsp;CORAGEM&nbsp; · &nbsp;VIDA</span></div>
-        <div className="quote-copy">
-          <SectionLabel>UMA VOZ QUE É DELA</SectionLabel>
-          <blockquote>“Venci todos eles.”</blockquote>
-          <p>Uma frase compartilhada por Juliana. Sua história será contada respeitando sua voz, sua fé e sua maneira de olhar para a vida.</p>
-        </div>
+      <section className="opening-quote">
+        <Quote className="quote-mark" />
+        <p>Minha história não cabe em um diagnóstico.</p>
+        <span>— JULIANA BATISTA</span>
       </section>
 
       <section className="journey section-pad" id="jornada">
         <div className="section-heading">
-          <SectionLabel>02 — A JORNADA</SectionLabel>
-          <h2>Capítulos de uma<br/><em>história em movimento.</em></h2>
-          <p>Uma linha do tempo construída com cuidado, a partir dos relatos e registros que Juliana autorizar compartilhar.</p>
+          <SectionLabel>02 — MINHA JORNADA</SectionLabel>
+          <h2>Uma vida de capítulos.<br/><em>Muitas razões para continuar.</em></h2>
+          <p>Vou contar, com minhas palavras, alguns dos momentos que marcaram esse caminho.</p>
         </div>
-        <div className="timeline">
-          {storyChapters.map((chapter, index) => (
+        <div className="story-chapters">
+          {storySections.slice(1).map((chapter, index) => (
             <motion.article
-              className="timeline-item"
-              key={chapter.number}
-              initial={reduceMotion ? false : { opacity: 0, x: index % 2 === 0 ? -24 : 24 }}
+              className={index % 2 === 0 ? "story-chapter" : "story-chapter reverse"}
+              key={chapter.id}
+              id={chapter.id}
+              initial={reduceMotion ? false : { opacity: 0, y: 36 }}
               whileInView="visible"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.16 }}
               variants={fadeUp}
             >
-              <div className="timeline-number">{chapter.number}</div>
-              <div className="timeline-card">
-                <span className="timeline-kicker">CAPÍTULO {chapter.number}</span>
+              <StoryImage src={chapter.image} alt={chapter.imageAlt} caption={chapter.imageCaption}/>
+              <div className="chapter-copy">
+                <span className="chapter-number">{chapter.number}</span>
+                <span className="timeline-kicker">{chapter.kicker}</span>
                 <h3>{chapter.title}</h3>
-                <p>{chapter.text}</p>
-                <small>{chapter.note}</small>
+                {chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </motion.article>
           ))}
         </div>
       </section>
 
-      <section className="manifesto">
-        <div className="manifesto-inner">
-          <Sparkles className="manifesto-star" />
-          <p className="manifesto-overline">NÃO É APENAS SOBRE UMA LUTA</p>
-          <h2>É sobre a vida<br/>que <em>continua.</em></h2>
-          <p className="manifesto-text">Sobre pessoas que se aproximam, mãos que se estendem e pequenos gestos que se transformam em cuidado.</p>
+      <section className="voice-wall">
+        <div className="voice-inner">
+          <SectionLabel>03 — PALAVRAS QUE SÃO MINHAS</SectionLabel>
+          <h2>Minha fé. Minha voz.<br/><em>Meu jeito de seguir.</em></h2>
+          <div className="voice-grid">
+            {voiceQuotes.map((quote, index) => (
+              <motion.div
+                className="voice-card"
+                key={quote}
+                initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08, duration: 0.6 }}
+              >
+                <span>0{index + 1}</span>
+                <p>“{quote}”</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="continuing section-pad">
+        <div className="continuing-image">
+          <img src="/images/juliana-hospital-heart.webp" alt="Juliana sorrindo no hospital e fazendo um coração com a mão." loading="lazy"/>
+          <span>UM DIA DE CADA VEZ</span>
+        </div>
+        <div className="continuing-copy">
+          <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
+          <h2>Hoje, eu preciso de uma corrente que caminhe <em>comigo.</em></h2>
+          <p>{campaignNeeds.purpose}</p>
+          <p>Não estou pedindo que alguém resolva tudo. Estou abrindo minha história para que cada pessoa que puder ajude como conseguir: com uma contribuição, uma mensagem de carinho ou compartilhando esta página.</p>
+          <a className="button button-gold" href="#contribuir">QUERO RECEBER SUA AJUDA <ArrowUpRight size={16}/></a>
         </div>
       </section>
 
       <section className="support section-pad" id="corrente">
         <div className="support-heading">
-          <SectionLabel>03 — A CORRENTE</SectionLabel>
-          <h2>Quando muitas mãos<br/><em>se unem.</em></h2>
-          <p>Estamos organizando esta campanha para apoiar as necessidades de Juliana ao longo de sua jornada. A finalidade detalhada e a meta serão publicadas após confirmação com ela e sua família.</p>
+          <SectionLabel>05 — UMA CORRENTE DE SOLIDARIEDADE</SectionLabel>
+          <h2>Um gesto pode chegar<br/><em>mais longe do que imaginamos.</em></h2>
+          <p>Se você puder contribuir, agradeço de coração. Se não puder, compartilhar minha história também ajuda a fazer esta corrente chegar a outras pessoas.</p>
         </div>
         <div className="support-points">
-          <div><Heart/><h3>Contribua</h3><p>Qualquer valor pode ser um gesto de solidariedade.</p></div>
-          <div><MessageCircle/><h3>Compartilhe</h3><p>Leve a história de Juliana a outras pessoas.</p></div>
-          <div><ShieldCheck/><h3>Acompanhe</h3><p>As atualizações e a prestação de contas serão compartilhadas com transparência.</p></div>
+          <div><Heart/><h3>Contribua</h3><p>Qualquer valor é bem-vindo e será destinado à campanha.</p></div>
+          <div><MessageCircle/><h3>Compartilhe</h3><p>Ajude minha história a chegar a quem pode caminhar comigo.</p></div>
+          <div><ShieldCheck/><h3>Acompanhe</h3><p>A família compartilhará atualizações sobre a arrecadação e a utilização dos recursos.</p></div>
         </div>
       </section>
 
       <section className="donate" id="contribuir">
         <div className="donate-inner">
-          <SectionLabel>04 — FAÇA PARTE DESSA HISTÓRIA</SectionLabel>
-          <h2>Um gesto de cuidado.<br/><em>Uma corrente de esperança.</em></h2>
-          <p>Se esta história tocar seu coração, você poderá contribuir ou compartilhá-la. Toda ajuda será recebida com gratidão.</p>
+          <SectionLabel>06 — SUA SOLIDARIEDADE FAZ PARTE DA MINHA HISTÓRIA</SectionLabel>
+          <h2>Se puder, caminhe<br/><em>um trecho comigo.</em></h2>
+          <p>Você pode contribuir com qualquer valor pelo Pix. O recebimento é feito pela minha mãe, Lourdes Aparecida Batista, que está responsável por esta arrecadação.</p>
           <div className="pix-panel">
             <div className="pix-visual">
-              <div className="qr-placeholder"><span>PIX</span><small>QR CODE OFICIAL<br/>SERÁ INSERIDO APÓS VALIDAÇÃO</small></div>
+              <img className="pix-qr" src={campaign.pix.qrImage} alt="QR Code Pix da campanha Viva a Vida, Juliana."/>
+              <span>APONTE A CÂMERA DO CELULAR</span>
             </div>
             <div className="pix-details">
-              <span className="timeline-kicker">CONTRIBUIÇÃO VIA PIX</span>
-              <h3>Contribua no seu tempo, do seu jeito.</h3>
-              <p>O pagamento será destinado à conta indicada pela família. Antes de confirmar, confira os dados do beneficiário exibidos pelo seu banco.</p>
-              <div className="beneficiary"><small>RESPONSÁVEL PELO RECEBIMENTO</small><strong>{campaign.pix.beneficiaryDisplayName}</strong><span>PicPay · chave aleatória</span></div>
-              {campaign.pix.copyPasteCode ? (
-                <button className="button button-gold" onClick={copyPix}>
-                  {copied ? <Check size={16}/> : <Copy size={16}/>}
-                  {copied ? "CÓDIGO COPIADO" : "COPIAR CÓDIGO PIX"}
-                </button>
-              ) : (
-                <button className="button button-gold button-disabled" disabled title="Disponível após validação do código Pix">
-                  <Copy size={16}/> CÓDIGO PIX EM VALIDAÇÃO
-                </button>
-              )}
-              <small className="security-note">A contribuição será habilitada após validação do QR Code e do código Pix Copia e Cola.</small>
+              <span className="timeline-kicker">PIX — VALOR LIVRE</span>
+              <h3>Contribua do seu jeito.</h3>
+              <p>Leia o QR Code ou copie o código Pix. Antes de confirmar, confira se o nome exibido pelo seu banco é <strong>Lourdes Aparecida Batista</strong>.</p>
+              <div className="beneficiary">
+                <small>RESPONSÁVEL PELO RECEBIMENTO</small>
+                <strong>{campaign.pix.beneficiaryDisplayName}</strong>
+                <span>Chave Pix aleatória · PicPay</span>
+              </div>
+              <button className="button button-gold" onClick={copyPix}>
+                {copied ? <Check size={16}/> : <Copy size={16}/>}
+                {copied ? "CÓDIGO PIX COPIADO" : "COPIAR CÓDIGO PIX"}
+              </button>
+              <small className="security-note">Depois de copiar, abra o aplicativo do seu banco, escolha Pix Copia e Cola, confira os dados e confirme somente se o beneficiário estiver correto.</small>
             </div>
           </div>
-          <a className="share-link" href="https://wa.me/?text=Quero%20compartilhar%20a%20campanha%20Viva%20a%20Vida%2C%20Juliana!" target="_blank" rel="noreferrer"><MessageCircle size={18}/> COMPARTILHAR PELO WHATSAPP <ArrowUpRight size={15}/></a>
+          <a className="share-link" href="https://wa.me/?text=Quero%20compartilhar%20a%20campanha%20Viva%20a%20Vida%2C%20Juliana!%20Conhe%C3%A7a%20a%20hist%C3%B3ria%20e%20fa%C3%A7a%20parte%20dessa%20corrente." target="_blank" rel="noreferrer"><MessageCircle size={18}/> COMPARTILHAR MINHA HISTÓRIA <ArrowUpRight size={15}/></a>
         </div>
+      </section>
+
+      <section className="final-message">
+        <Sparkles/>
+        <p>Eu já atravessei muitos capítulos.</p>
+        <h2>Mas minha história<br/><em>continua sendo escrita.</em></h2>
+        <span>Obrigada por caminhar comigo.</span>
+        <strong>JULIANA BATISTA</strong>
       </section>
 
       <footer className="footer">
