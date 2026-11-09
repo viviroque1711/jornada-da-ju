@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDown, ArrowUpRight, Heart, Copy, Check, Menu, X,
-  MessageCircle, ShieldCheck, Quote
+  MessageCircle, ShieldCheck, Quote, Volume2, VolumeX
 } from "lucide-react";
 import { campaign, storySections, voiceQuotes, campaignNeeds, faithDecision } from "./content";
 
@@ -29,6 +29,8 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [activeQuote, setActiveQuote] = useState<number | null>(null);
+  const [videoMuted, setVideoMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const reduceMotion = useReducedMotion();
 
   async function copyPix() {
@@ -195,11 +197,26 @@ export default function App() {
             playsInline
             preload="metadata"
             poster={campaign.video.poster}
+            muted={videoMuted}
+            ref={videoRef}
             aria-label="Juliana em um momento pessoal, falando à câmera"
           >
             <source src={campaign.video.src} type="video/mp4" />
           </video>
           <div className="video-interlude-shade" />
+          <button
+            className="video-audio-toggle"
+            type="button"
+            onClick={() => {
+              const nextMuted = !videoMuted;
+              if (videoRef.current) videoRef.current.muted = nextMuted;
+              setVideoMuted(nextMuted);
+            }}
+            aria-label={videoMuted ? "Ativar o áudio do vídeo" : "Silenciar o vídeo"}
+          >
+            {videoMuted ? <Volume2 size={15}/> : <VolumeX size={15}/>}
+            {videoMuted ? "OUVIR A JULIANA" : "SILENCIAR"}
+          </button>
           <motion.div
             className="video-interlude-copy"
             initial={reduceMotion ? false : { opacity: 0, x: -24 }}
