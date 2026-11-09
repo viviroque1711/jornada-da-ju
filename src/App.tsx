@@ -73,7 +73,7 @@ export default function App() {
         <div className="hero-copy">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-inner">
             <SectionLabel>{campaign.eyebrow}</SectionLabel>
-            <h1>Nunca foi<br/><em>sobre um diagnóstico.</em></h1>
+            <h1>Nunca foi<br/><em>sobre um</em><br/><em>diagnóstico.</em></h1>
             <div className="hero-rule"><span /></div>
             <p className="hero-manifesto">Eu tinha planos, projetos e sonhos. Até que um diagnóstico mudou tudo.</p>
             <p className="hero-description">{campaign.heroDescription}</p>
