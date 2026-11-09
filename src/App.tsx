@@ -233,7 +233,12 @@ export default function App() {
       <footer className="footer">
         <a className="wordmark" href="#inicio"><span className="wordmark-mark">V.</span><span>VIVA A VIDA <b>JULIANA</b></span></a>
         <p>Uma história real. Uma corrente de solidariedade.</p>
-        <span className="footer-signature">FEITO COM CUIDADO E RESPEITO.</span>
+        <div className="footer-contact">
+          <a href="https://wa.me/5511973967161" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">
+            <MessageCircle size={14}/> Fale conosco pelo WhatsApp
+          </a>
+          <span className="footer-signature">Desenvolvido por <a href="https://roquebusinessevolution.com/" target="_blank" rel="noreferrer">Roque Business Evolution</a></span>
+        </div>
       </footer>
     </main>
   );
