@@ -10,6 +10,13 @@ export const campaign = {
   heroDescription:
     "Eu tinha uma vida cheia de planos, projetos e sonhos. Então, um diagnóstico chegou e mudou tudo. Esta é a história de como decidi continuar — e de por que hoje peço que você caminhe comigo.",
   heroImage: "/jornada-da-ju/images/juliana-hero.webp",
+  video: {
+    src: "",
+    poster: "/jornada-da-ju/images/juliana-hero.webp",
+    eyebrow: "UM RESPIRO NO MEIO DA JORNADA",
+    headline: "Há vida em cada momento que ainda quero viver.",
+    caption: "Um pedacinho de mim, das coisas que amo e dos motivos que me fazem continuar."
+  },
   pix: {
     copyPasteCode: "00020126580014br.gov.bcb.pix013697556e8f-e359-48a9-a415-b680ea4c4e685204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AECEAB9E23E3430529478630477E6",
     qrImage: "/jornada-da-ju/images/pix-juliana.png",
