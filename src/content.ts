@@ -1,116 +1,102 @@
 /**
- * Conteúdo editorial provisório da campanha.
- * Todos os relatos médicos, datas, imagens e citações devem ser revisados e aprovados por Juliana
- * antes da publicação. O texto distingue o que ela relatou daquilo que ainda requer confirmação.
+ * Narrativa em primeira pessoa elaborada a partir dos relatos compartilhados por Juliana.
+ * Deve ser revisada e aprovada por ela antes de publicação definitiva.
+ * Não interpretar nem acrescentar diagnósticos; preservar os termos que ela relatou.
  */
 export const campaign = {
   title: "Viva a Vida, Juliana!",
   eyebrow: "UMA CORRENTE DE SOLIDARIEDADE",
-  heroHeadline: "Uma história de coragem.\nUma vida que merece ser celebrada.",
+  heroHeadline: "Eu já enfrentei muitas batalhas. E continuo escolhendo a vida.",
   heroDescription:
-    "Antes de cada diagnóstico, existe uma mulher. Esta é a jornada de Juliana — contada com verdade, afeto e esperança.",
+    "Esta é a minha história — feita de recomeços, fé, coragem e pessoas que podem caminhar comigo.",
   heroImage: "/images/juliana-hero.webp",
   pix: {
-    // Inserir somente o BR Code completo e validado com a titular.
-    copyPasteCode: "",
+    copyPasteCode: "00020126580014br.gov.bcb.pix013697556e8f-e359-48a9-a415-b680ea4c4e685204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AECEAB9E23E3430529478630477E6",
+    qrImage: "/images/pix-juliana.png",
     beneficiaryDisplayName: "Lourdes Aparecida Batista",
-    enabled: false,
+    enabled: true,
   },
 };
 
-export const storyNarrative = {
-  opening:
-    "Há histórias que não seguem uma linha reta. A de Juliana é feita de recomeços, notícias inesperadas, tratamentos, pausas para respirar e uma decisão que atravessa seus relatos: continuar. Para contar essa história, é preciso voltar ao começo — e lembrar que, antes de ser paciente, Juliana é uma mulher com uma vida inteira que não cabe em um diagnóstico.",
-  firstBattleTitle: "A primeira batalha: o câncer de mama",
-  firstBattle:
-    "A primeira grande batalha relatada por Juliana foi contra o câncer de mama. Para tratar a doença, ela passou por uma cirurgia e precisou retirar parte da mama. Foi uma experiência que marcou sua história e exigiu força para atravessar o tratamento e reconstruir a vida depois dele. Juliana conta que venceu essa primeira batalha.",
-  yearsLaterTitle: "Dez anos depois, novos desafios",
-  yearsLater:
-    "Cerca de dez anos depois, novos diagnósticos voltaram a mudar seus planos. Em seus relatos, Juliana menciona um câncer de intestino, um câncer de vesícula — que identifica como colangiocarcinoma —, tumores no pulmão e alterações no fígado. Ela resume esse capítulo com as próprias palavras: “VENCI TODOS ELES”. A sequência, a quantidade e a classificação exata de cada diagnóstico ainda precisam ser conferidas com ela antes da publicação definitiva.",
-  remissionTitle: "Quando a remissão parecia estar perto",
-  remission:
-    "Em outro relato, Juliana conta que, depois de quatro anos de luta, quando imaginava estar próxima da remissão, recebeu a notícia de que haviam sido encontrados quatro tumores no fígado. Era mais uma mudança de caminho quando ela já se preparava para respirar um pouco mais aliviada. Esse episódio será situado na linha do tempo após a confirmação das datas e dos detalhes com Juliana.",
-  recentTitle: "Mais uma etapa. Mais uma vez, continuar.",
-  recent:
-    "No relato mais recente compartilhado para esta campanha, Juliana conta que vinha fazendo quimioterapia havia cerca de um ano. Ela relata novas descobertas no pâncreas e nas vias biliares e uma neoplasia no pulmão. Durante uma biópsia pulmonar, conta que sofreu uma hemorragia e outras complicações respiratórias, seguidas de internação e novos cuidados. Mesmo depois dessa experiência, ela compartilhou que continuava a quimioterapia e encerrou o relato com uma frase de fé: “VENCEMOS EM NOME DE JESUS”. Os termos médicos e a descrição clínica serão revisados com ela antes da publicação.",
-  voiceTitle: "A voz que atravessa a história",
-  voice:
-    "Em agosto de 2022, Juliana escreveu sobre a importância da fé, da cabeça erguida e do pensamento positivo. Em outros registros, usou palavras como “superação”, “venci todos eles” e “mais um dia vencido”. Não precisamos falar por ela: queremos preservar as palavras que escolheu compartilhar e deixar que sua própria voz apareça nesta jornada.",
-  closing:
-    "É por isso que esta campanha existe. Não para resumir Juliana à doença, nem para prometer resultados que ninguém pode garantir. Existe para que ela saiba que não está sozinha e para reunir pessoas dispostas a ajudar com as necessidades desta caminhada. Cada contribuição, cada mensagem de carinho e cada compartilhamento pode se transformar em cuidado concreto.",
-};
-
-export const storyTimeline = [
+export const storySections = [
   {
-    marker: "O PRIMEIRO CAPÍTULO",
-    title: "Câncer de mama",
-    text: "Juliana enfrentou o câncer de mama, passou por cirurgia e retirou parte da mama. Ela relata ter vencido essa primeira batalha.",
-    time: "Primeiro diagnóstico — ano a confirmar",
-    image: "",
-    imageAlt: "",
+    id: "quem-sou",
+    number: "01",
+    kicker: "ANTES DOS DIAGNÓSTICOS",
+    title: "Eu sou a Juliana. E minha história é muito maior que a doença.",
+    paragraphs: [
+      "Quero que você me conheça para além dos hospitais, dos exames e dos tratamentos. Sou uma mulher com meus gostos, meus afetos, minha fé, meus momentos de alegria e uma vida inteira de lembranças.",
+      "Gosto de sorrir, de estar perto de quem amo e de guardar os momentos que fazem a vida valer a pena. Por isso, quando conto minha história, não quero falar apenas sobre o que enfrentei. Quero falar também sobre quem sou e sobre tudo o que ainda desejo viver."
+    ],
+    image: "/images/juliana-portrait.webp",
+    imageAlt: "Retrato de Juliana em um momento pessoal.",
+    imageCaption: "Eu, muito além dos capítulos difíceis."
   },
   {
-    marker: "CERCA DE DEZ ANOS DEPOIS",
-    title: "Novos diagnósticos e tratamentos",
-    text: "Em seus relatos, Juliana menciona câncer de intestino, câncer de vesícula/colangiocarcinoma, tumores pulmonares e alterações no fígado. A ordem e a classificação de cada achado serão confirmadas com ela.",
-    time: "Aproximadamente dez anos após a primeira batalha",
-    image: "",
-    imageAlt: "",
+    id: "primeira-batalha",
+    number: "02",
+    kicker: "O PRIMEIRO RECOMEÇO",
+    title: "Minha primeira batalha foi contra o câncer de mama.",
+    paragraphs: [
+      "Foi o primeiro grande desafio que precisei enfrentar. O câncer de mama mudou minha vida e me levou a passar por uma cirurgia em que retirei parte da mama.",
+      "Não foi um caminho simples. Precisei encontrar forças para atravessar aquele momento, cuidar de mim e seguir em frente. Eu venci aquela primeira batalha — e continuei vivendo, fazendo planos e construindo novas lembranças."
+    ],
+    image: "/images/juliana-hospital-v.webp",
+    imageAlt: "Juliana em um registro pessoal durante uma passagem pelo hospital.",
+    imageCaption: "Um registro de uma das etapas da minha caminhada."
   },
   {
-    marker: "UMA EXPECTATIVA INTERROMPIDA",
-    title: "Quatro tumores no fígado",
-    text: "Juliana conta que, após quatro anos de luta e quando acreditava estar perto da remissão, recebeu a notícia de quatro tumores no fígado.",
-    time: "Data a confirmar com Juliana",
-    image: "",
-    imageAlt: "",
+    id: "dez-anos-depois",
+    number: "03",
+    kicker: "NOVOS DESAFIOS",
+    title: "Cerca de dez anos depois, precisei recomeçar mais uma vez.",
+    paragraphs: [
+      "Quando já havia passado tanto tempo desde a primeira batalha, novos diagnósticos voltaram a fazer parte da minha vida. Nos meus relatos, compartilhei que enfrentei câncer de intestino e câncer de vesícula, que identifiquei como colangiocarcinoma. Também falei sobre tumores no pulmão e alterações no fígado.",
+      "Vieram novos tratamentos, cirurgias e períodos de muita incerteza. Em uma das minhas publicações, escrevi com a força que eu sentia naquele momento: “VENCI TODOS ELES”. Era a minha maneira de registrar cada etapa que eu havia atravessado."
+    ],
+    image: "/images/juliana-hospital-heart.webp",
+    imageAlt: "Juliana sorrindo e fazendo um coração com a mão durante uma internação.",
+    imageCaption: "Mesmo nos dias difíceis, procurei guardar espaço para o sorriso."
   },
   {
-    marker: "REGISTROS DE 2022",
-    title: "Fé, tratamento e superação",
-    text: "Em publicações de agosto e novembro de 2022, Juliana compartilhou sua experiência, falou sobre fé e pensamento positivo e registrou etapas de tratamento e recuperação.",
-    time: "Agosto e novembro de 2022",
-    image: "",
-    imageAlt: "",
+    id: "remissao",
+    number: "04",
+    kicker: "QUANDO EU ESPERAVA RESPIRAR",
+    title: "Quando eu acreditava estar perto da remissão, veio outra notícia.",
+    paragraphs: [
+      "Depois de quatro anos de luta, eu acreditava que estava perto de entrar em remissão. Eu imaginava que poderia começar uma fase diferente, com um pouco mais de tranquilidade.",
+      "Mas, naquele momento, recebi a notícia de que haviam sido encontrados quatro tumores no fígado. Foi mais uma mudança inesperada no caminho, quando eu já alimentava a esperança de respirar um pouco mais aliviada.",
+      "Em um dos meus relatos, falei sobre a fé, a força dos pensamentos e a decisão de seguir em frente. Escrevi: “Acredite! Desistir não me representa. Avante!”"
+    ],
+    image: "/images/juliana-headwrap.webp",
+    imageAlt: "Juliana em um registro pessoal durante seu tratamento.",
+    imageCaption: "Um momento da caminhada que compartilhei com quem estava perto de mim."
   },
   {
-    marker: "RELATO MAIS RECENTE",
-    title: "Uma nova etapa de cuidados",
-    text: "Juliana relata cerca de um ano de quimioterapia, novas descobertas no pâncreas, nas vias biliares e no pulmão, além de complicações durante uma biópsia pulmonar. Ela conta que seguiu com a quimioterapia.",
-    time: "Data e descrições clínicas a confirmar",
-    image: "",
-    imageAlt: "",
-  },
+    id: "continuar",
+    number: "05",
+    kicker: "A JORNADA CONTINUA",
+    title: "Enfrentei novas complicações. E continuei o tratamento.",
+    paragraphs: [
+      "Mais recentemente, contei que estava fazendo quimioterapia havia cerca de um ano e que haviam sido identificadas novas alterações no pâncreas e nas vias biliares, além de uma neoplasia no pulmão.",
+      "Durante uma biópsia no pulmão, passei por uma complicação muito séria. Relatei uma hemorragia pulmonar, uma fístula de ar e a formação de um coágulo no pulmão. Depois disso, enfrentei outras complicações que descrevi como pneumonia e embolias, além de episódios de sangramento pela boca.",
+      "Foi um período assustador e difícil. Mas, depois de tudo isso, compartilhei que estava continuando a quimioterapia. E escrevi do meu jeito, com a fé que me acompanha: “VENCEMOSSSS EM NOME DE JESUS!”"
+    ],
+    image: "/images/juliana-hospital-heart.webp",
+    imageAlt: "Juliana sorrindo no hospital e fazendo um coração com a mão.",
+    imageCaption: "Mais um registro de coragem, fé e vontade de continuar."
+  }
 ];
 
-export const storyChapters = [
-  {
-    number: "01",
-    title: "A primeira batalha",
-    text: "O câncer de mama, a cirurgia e a retirada de parte da mama. Juliana conta que venceu essa primeira etapa.",
-    note: "Ano e detalhes do tratamento a confirmar.",
-  },
-  {
-    number: "02",
-    title: "Dez anos depois",
-    text: "Novos diagnósticos voltaram a exigir tratamento. Juliana menciona câncer de intestino, câncer de vesícula/colangiocarcinoma, tumores no pulmão e alterações no fígado.",
-    note: "Sequência e classificação médica pendentes de revisão com Juliana.",
-  },
-  {
-    number: "03",
-    title: "Quando a remissão parecia próxima",
-    text: "Depois de quatro anos de luta, Juliana relata ter descoberto quatro tumores no fígado quando acreditava estar perto da remissão.",
-    note: "Data e relação com os demais episódios a confirmar.",
-  },
-  {
-    number: "04",
-    title: "A força de continuar",
-    text: "Em registros de 2022, ela compartilhou mensagens de fé, pensamento positivo e superação. Em seu relato mais recente, conta que continua a quimioterapia após novas descobertas e complicações.",
-    note: "Os relatos serão publicados após aprovação da Juliana.",
-  },
+export const voiceQuotes = [
+  "Desistir não me representa. Avante!",
+  "Se eu consigo, você também consegue.",
+  "Mais um dia vencido.",
+  "Venci todos eles."
 ];
 
 export const campaignNeeds = {
   goal: null as number | null,
-  purpose: "A finalidade detalhada da arrecadação será descrita após confirmação das necessidades atuais com Juliana e sua família.",
+  purpose:
+    "Estou pedindo ajuda para contribuir com as despesas desta caminhada e do meu tratamento. A família atualizará esta página com a finalidade detalhada da arrecadação e a prestação de contas."
 };
