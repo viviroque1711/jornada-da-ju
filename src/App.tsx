@@ -73,9 +73,9 @@ export default function App() {
         <div className="hero-copy">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-inner">
             <SectionLabel>{campaign.eyebrow}</SectionLabel>
-            <h1>Viva a vida,<br/><em>Juliana.</em></h1>
+            <h1>Nunca foi<br/><em>sobre um diagnóstico.</em></h1>
             <div className="hero-rule"><span /></div>
-            <p className="hero-manifesto">“Eu já enfrentei muitas batalhas. E continuo escolhendo a vida.”</p>
+            <p className="hero-manifesto">Eu tinha planos, projetos e sonhos. Até que um diagnóstico mudou tudo.</p>
             <p className="hero-description">{campaign.heroDescription}</p>
             <div className="hero-actions">
               <a className="button button-gold" href="#contribuir">CAMINHE COMIGO <ArrowUpRight size={16}/></a>
@@ -110,7 +110,7 @@ export default function App() {
 
       <section className="opening-quote">
         <Quote className="quote-mark" />
-        <p>Minha história não cabe em um diagnóstico.</p>
+        <p>Nunca foi sobre um diagnóstico.</p>
         <span>— JULIANA BATISTA</span>
       </section>
 
@@ -174,7 +174,8 @@ export default function App() {
           <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
           <h2>Hoje, eu preciso de uma corrente que caminhe <em>comigo.</em></h2>
           <p>{campaignNeeds.purpose}</p>
-          <p>Não estou pedindo que alguém resolva tudo. Estou abrindo minha história para que cada pessoa que puder ajude como conseguir: com uma contribuição, uma mensagem de carinho ou compartilhando esta página.</p>
+          <p>{campaignNeeds.inspiration}</p>
+          <p>Se você se sentir tocado pela minha história e puder contribuir, qualquer valor será recebido com gratidão. Se não puder, compartilhar esta página também é uma forma de caminhar comigo.</p>
           <a className="button button-gold" href="#contribuir">QUERO RECEBER SUA AJUDA <ArrowUpRight size={16}/></a>
         </div>
       </section>
@@ -183,12 +184,12 @@ export default function App() {
         <div className="support-heading">
           <SectionLabel>05 — UMA CORRENTE DE SOLIDARIEDADE</SectionLabel>
           <h2>Um gesto pode chegar<br/><em>mais longe do que imaginamos.</em></h2>
-          <p>Se você puder contribuir, agradeço de coração. Se não puder, compartilhar minha história também ajuda a fazer esta corrente chegar a outras pessoas.</p>
+          <p>Eu gostaria de contar com as pessoas que se sentirem motivadas pela minha história. Uma contribuição, por menor que seja, pode aliviar parte do peso financeiro desta caminhada. E compartilhar também ajuda minha mensagem a chegar mais longe.</p>
         </div>
         <div className="support-points">
           <div><Heart/><h3>Contribua</h3><p>Qualquer valor é bem-vindo e será destinado à campanha.</p></div>
           <div><MessageCircle/><h3>Compartilhe</h3><p>Ajude minha história a chegar a quem pode caminhar comigo.</p></div>
-          <div><ShieldCheck/><h3>Acompanhe</h3><p>A família compartilhará atualizações sobre a arrecadação e a utilização dos recursos.</p></div>
+          <div><ShieldCheck/><h3>Faça parte</h3><p>Seu gesto me ajuda a continuar e permite que esta história alcance outras pessoas.</p></div>
         </div>
       </section>
 
