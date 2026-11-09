@@ -130,5 +130,7 @@ export const campaignNeeds = {
   purpose:
     "Eu e minha família estamos fazendo o melhor que podemos para seguir com o tratamento e cuidar de cada etapa. Ainda assim, o desafio financeiro existe: as despesas dessa caminhada pesam e se somam. Depois de pensar muito, decidi pedir ajuda. Não é um pedido fácil, mas entendi que também preciso permitir que outras pessoas caminhem comigo.",
   inspiration:
-    "Se minha história tocar você e estiver ao seu alcance, sua ajuda será muito importante. Qualquer contribuição, dentro das suas possibilidades, será recebida com gratidão. Ajude somente se puder, sem comprometer suas próprias necessidades. E, se não puder contribuir financeiramente, compartilhar esta página também é uma forma de apoio."
+    "Eu não quero que minha história seja lembrada apenas pelos diagnósticos. Quero que ela alcance outras pessoas, incentive alguém a não perder a esperança, a procurar ajuda e a valorizar a vida. Meu desejo é que minha caminhada encoraje alguém a buscar cuidado e, quem sabe, ajude a salvar uma vida. Quero continuar vivendo e, enquanto eu viver, ser instrumento nas mãos de Deus para tocar outras vidas.",
+  request:
+    "Se minha história tocar você e estiver ao seu alcance, sua ajuda será muito importante. Se puder contribuir, ficarei muito grata. Qualquer valor, dentro das suas possibilidades, fará diferença. E, se não puder ajudar financeiramente, compartilhar esta página também é uma forma de apoio."
 };
