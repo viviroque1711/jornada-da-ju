@@ -92,6 +92,7 @@ export default function App() {
 
       <section className="intro section-pad" id="historia">
         <div className="intro-side"><SectionLabel>01 — QUEM É JULIANA</SectionLabel><span className="vertical-note">UMA VIDA INTEIRA, ALÉM DOS DESAFIOS</span></div>
+        <motion.div className="intro-photo" initial={reduceMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8 }}><img src="/images/juliana-portrait.webp" alt="Retrato de Juliana, compartilhado com autorização para a campanha."/><span>JULIANA, ALÉM DA JORNADA</span></motion.div>
         <motion.div className="intro-content" initial={reduceMotion ? false : "hidden"} whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={fadeUp}>
           <p className="large-serif">Antes de conhecer sua jornada de saúde, queremos que você conheça <em>a mulher.</em></p>
           <p className="body-copy">Seus afetos, seus sonhos, sua personalidade, as coisas que a fazem sorrir e as pessoas que caminham ao seu lado. Porque nenhuma história cabe em um diagnóstico.</p>
