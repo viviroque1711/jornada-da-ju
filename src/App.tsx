@@ -175,21 +175,34 @@ export default function App() {
       {campaign.video.src && (
         <section className="video-interlude" aria-label="Um vídeo especial da Juliana">
           <video
-            className="video-interlude-media"
+            className="video-interlude-background"
             autoPlay
             muted
             loop
             playsInline
             preload="metadata"
             poster={campaign.video.poster}
-            aria-label="Vídeo escolhido por Juliana"
+            aria-hidden="true"
+            tabIndex={-1}
+          >
+            <source src={campaign.video.src} type="video/mp4" />
+          </video>
+          <video
+            className="video-interlude-portrait"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={campaign.video.poster}
+            aria-label="Juliana em um momento pessoal, falando à câmera"
           >
             <source src={campaign.video.src} type="video/mp4" />
           </video>
           <div className="video-interlude-shade" />
           <motion.div
             className="video-interlude-copy"
-            initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+            initial={reduceMotion ? false : { opacity: 0, x: -24 }}
             whileInView="visible"
             viewport={{ once: true, amount: 0.25 }}
             variants={fadeUp}
