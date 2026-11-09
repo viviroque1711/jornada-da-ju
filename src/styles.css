@@ -38,9 +38,9 @@ button{font:inherit}
 .photo-caption{position:absolute;bottom:65px;left:12%;right:12%;z-index:2;display:flex;justify-content:space-between;color:#e5dfd0;font-size:8px;letter-spacing:.2em}
 .hero-bottom{position:absolute;bottom:25px;left:5.5vw;right:5.5vw;z-index:3;display:flex;justify-content:space-between;color:#777;font-size:8px;letter-spacing:.2em}
 .section-pad{padding:125px 10vw}
-.intro{display:grid;grid-template-columns:.65fr 1.35fr;gap:8vw;background:#f3f1eb;color:#141414}
+.intro{display:grid;grid-template-columns:.35fr .75fr 1fr;gap:4vw;background:#f3f1eb;color:#141414;align-items:center}
 .intro .section-label{color:#94701d}.intro .section-label span{background:#94701d}
-.vertical-note{display:block;margin-top:90px;writing-mode:vertical-rl;font-size:8px;letter-spacing:.2em;color:#9b978e}
+.vertical-note{display:block;margin-top:90px;writing-mode:vertical-rl;font-size:8px;letter-spacing:.2em;color:#9b978e}\n.intro-photo{position:relative;min-height:440px;align-self:stretch;overflow:hidden;background:#d9d5ca}\n.intro-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 30%;filter:grayscale(100%);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}\n.intro-photo:hover img{transform:scale(1.035)}\n.intro-photo span{position:absolute;bottom:18px;left:18px;color:#fff;font-size:8px;letter-spacing:.18em;text-shadow:0 1px 8px #000}
 .large-serif{font-family:"Bodoni Moda",serif;font-size:clamp(38px,5.4vw,72px);line-height:1.13;letter-spacing:-.045em;margin:0 0 27px}
 .large-serif em{color:#a27a20}
 .body-copy{font-size:13px;line-height:2;color:#5f5c56;max-width:620px}
@@ -105,7 +105,7 @@ button{font:inherit}
 @media(max-width:800px){
  .topbar{height:70px;padding:0 6vw}.menu-toggle{display:block}.nav{display:none;position:absolute;top:70px;left:0;right:0;background:#111;padding:25px 7vw;flex-direction:column;align-items:flex-start;gap:23px;border-bottom:1px solid #ffffff22}.nav-open{display:flex}
  .hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:85px 8vw 45px}.hero-photo{min-height:390px;grid-row:1}.hero-photo:after{background:linear-gradient(0deg,#080808 0%,transparent 35%)}.hero h1{font-size:76px}.hero-bottom{position:relative;padding:16px 7vw;left:auto;right:auto;bottom:auto}
- .section-pad{padding:85px 8vw}.intro{grid-template-columns:1fr;gap:30px}.vertical-note{writing-mode:initial;margin-top:15px}.large-serif{font-size:48px}
+ .section-pad{padding:85px 8vw}.intro{grid-template-columns:1fr;gap:30px}.intro-photo{min-height:390px;max-height:540px;order:2}.intro-content{order:3}.intro-side{order:1}.vertical-note{writing-mode:initial;margin-top:15px}.large-serif{font-size:48px}
  .quote-band{grid-template-columns:1fr}.quote-image{min-height:230px}.quote-copy{padding:55px 8vw}
  .timeline:before{left:22px}.timeline-item{grid-template-columns:45px 1fr;gap:15px}.timeline-number{width:45px;height:45px;font-size:19px}.timeline-card{padding:23px 19px}.timeline-card h3{font-size:24px}
  .support-points{grid-template-columns:1fr;gap:30px}.donate{padding:85px 7vw}.pix-panel{grid-template-columns:1fr}.pix-visual{min-height:280px}.pix-details{padding:28px}.footer{align-items:flex-start;flex-direction:column;padding:35px 7vw}
