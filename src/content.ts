@@ -42,7 +42,7 @@ export const storySections = [
       "Para tratar o câncer de mama, passei por uma cirurgia e precisei retirar parte da mama. Foi um momento muito difícil, física e emocionalmente. Eu precisei reunir forças, atravessar o tratamento e aprender a conviver com tantas mudanças.",
       "Naquele começo, eu esperava que fosse uma única batalha. Queria tratar, me recuperar e voltar aos meus planos. E, quando consegui vencer aquele primeiro câncer, segui vivendo, acreditando que aquele capítulo tinha ficado para trás."
     ],
-    image: "/jornada-da-ju/images/juliana-hospital-v.webp",
+    image: "/jornada-da-ju/images/juliana-primeiro-capitulo.webp",
     imageAlt: "Juliana em um registro pessoal durante uma passagem pelo hospital.",
     imageCaption: "Uma das imagens que guardam o começo da minha caminhada."
   },
@@ -91,11 +91,32 @@ export const storySections = [
 ];
 
 export const voiceQuotes = [
-  "Desistir não me representa. Avante!",
-  "Se eu consigo, você também consegue.",
-  "Mais um dia vencido.",
-  "Venci todos eles."
+  {
+    phrase: "Desistir não me representa. Avante!",
+    detail: "Em um registro de agosto de 2022, compartilhei essa frase enquanto a luta contra o câncer continuava. Eu não estava dizendo que era fácil. Estava registrando a decisão de seguir, um passo de cada vez, com fé e coragem para enfrentar o que viesse."
+  },
+  {
+    phrase: "Se eu consigo, você também consegue.",
+    detail: "Essa é uma mensagem que quero deixar a quem também enfrenta dias difíceis. Cada história é única e cada pessoa tem seu próprio tempo. Mas eu gostaria que minhas palavras lembrassem alguém de que não precisa atravessar tudo sozinho e de que vale a pena procurar apoio, cuidado e esperança."
+  },
+  {
+    phrase: "Mais um dia vencido.",
+    detail: "Em fevereiro de 2023, compartilhei um registro de um dia no hospital com essa frase. Para mim, cada dia atravessado tinha valor. Às vezes, a conquista não é dar um passo enorme: é conseguir viver mais um dia e reconhecer a força que isso exige."
+  },
+  {
+    phrase: "Venci todos eles.",
+    detail: "Em novembro de 2022, registrei etapas de tratamentos e diagnósticos que havia enfrentado. Escrevi “Venci todos eles” como expressão da minha fé e da forma como enxergava aquelas batalhas. Essa frase não apaga a dificuldade; ela guarda a força que encontrei para atravessar cada etapa."
+  }
 ];
+
+export const faithDecision = {
+  title: "A decisão que tomei diante de Deus.",
+  paragraphs: [
+    "Depois do impacto do primeiro diagnóstico, precisei de um tempo para organizar tudo dentro de mim. Eu não tinha escolhido aquela doença, mas podia decidir como colocaria meu coração diante daquela caminhada.",
+    "Decidi entregar minha vida a Deus, me colocar à disposição da vontade Dele e pedir que Ele me conduzisse. Queria ser instrumento em Suas mãos — e, se minha história pudesse inspirar, acolher ou encorajar alguém, que ela também servisse a esse propósito.",
+    "Naquele começo, eu imaginava que seria uma única batalha. Esperava tratar, me recuperar e voltar aos meus planos. Não sabia que novos diagnósticos continuariam aparecendo. Mas, a cada notícia, precisei reorganizar minhas forças e renovar minha escolha de continuar vivendo."
+  ]
+};
 
 export const campaignNeeds = {
   goal: null as number | null,
