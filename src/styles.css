@@ -56,6 +56,11 @@ img{display:block;max-width:100%}
 .body-copy{font-size:12px;line-height:2;color:#5f5c56;max-width:620px}
 .signature{font-family:"Cormorant Garamond",serif;font-size:25px;color:#93701d;margin-top:28px;line-height:1.1}
 .signature strong{font-size:34px;font-weight:600}
+.faith-commitment{background:#111;padding:96px 9vw;color:#f6f4ef}
+.faith-inner{max-width:860px;margin:0 auto;border-left:1px solid var(--gold);padding:8px 0 8px 42px}
+.faith-commitment h2{font-family:"Bodoni Moda",serif;font-size:clamp(38px,5vw,64px);font-weight:500;line-height:1.06;letter-spacing:-.04em;margin:25px 0 24px}
+.faith-commitment p{font-size:12px;line-height:2;color:#c9c3b8;max-width:760px;margin:0 0 16px}
+.faith-signature{display:block;margin-top:25px;font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:24px;font-style:italic}
 .opening-quote{background:#111;text-align:center;padding:76px 22px 84px;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12}
 .quote-mark{color:var(--gold);width:22px;height:22px}
 .opening-quote p{font-family:"Cormorant Garamond",serif;font-size:clamp(36px,5vw,64px);font-style:italic;color:#fff;margin:18px auto 16px}
@@ -82,9 +87,18 @@ img{display:block;max-width:100%}
 .voice-wall h2{font-family:"Bodoni Moda",serif;font-size:clamp(43px,6vw,76px);font-weight:500;line-height:1.03;letter-spacing:-.05em;margin:28px 0 55px}
 .voice-wall h2 em{font-family:"Cormorant Garamond",serif;color:var(--gold)}
 .voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.voice-card{border:1px solid #ffffff24;padding:27px 28px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#161616,#0b0b0b)}
-.voice-card span{font-size:8px;color:var(--gold);letter-spacing:.18em}
-.voice-card p{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,3vw,37px);line-height:1.1;color:#f5f1e7;margin:18px 0 0}
+.voice-intro{max-width:640px;color:#bcb7ac;font-size:11px;line-height:1.9;margin:-28px 0 34px}
+.voice-card{border:1px solid #ffffff24;min-height:160px;background:linear-gradient(145deg,#161616,#0b0b0b);transition:border-color .25s ease,background .25s ease}
+.voice-card:hover,.voice-card-open{border-color:#b99743;background:linear-gradient(145deg,#1d1b15,#0b0b0b)}
+.voice-card-trigger{width:100%;min-height:160px;padding:25px 28px 22px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:18px;text-align:left;color:inherit;background:transparent;border:0;cursor:pointer}
+.voice-card-trigger:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
+.voice-card-number{font-size:8px;color:var(--gold);letter-spacing:.18em}
+.voice-card-phrase{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,3vw,37px);line-height:1.1;color:#f5f1e7}
+.voice-card-action{width:100%;display:flex;align-items:center;justify-content:space-between;color:#c3a45a;font-size:8px;letter-spacing:.17em}
+.voice-card-action span{font-size:19px;line-height:1;color:var(--gold)}
+.voice-card-detail{padding:0 28px 26px;border-top:1px solid #ffffff1e;overflow:hidden}
+.voice-card-detail p{font-size:11px;line-height:1.9;color:#c5c0b6;margin:18px 0 0}
+
 .continuing{display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center;background:#f3f1eb;color:#111}
 .continuing-image{height:540px;min-height:490px;position:relative;overflow:hidden;background:#d5d1c7}
 .continuing-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:contain;object-position:center center;background:#d5d1c7;filter:grayscale(100%)}
@@ -123,9 +137,16 @@ img{display:block;max-width:100%}
 .final-message h2 em{color:var(--gold)}
 .final-message>span{display:block;color:#b9b4aa;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:26px;margin:28px 0}
 .final-message>strong{font-size:8px;color:var(--gold);letter-spacing:.25em}
-.footer{padding:45px 5.5vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #ffffff20;gap:20px;flex-wrap:wrap}
-.footer>p{font-size:9px;color:#999}
-.footer-signature{font-size:8px;letter-spacing:.17em;color:#777}
+.footer{padding:42px 5.5vw;display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:center;border-top:1px solid #ffffff20;gap:28px}
+.footer-center{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.footer-center p{font-size:11px;line-height:1.6;color:#c4beb2;margin:0}
+.footer-whatsapp{display:inline-flex;align-items:center;gap:8px;color:#d8b85d;font-size:9px;letter-spacing:.08em;transition:color .2s ease}
+.footer-whatsapp:hover{color:#f3d36b}
+.footer-credit{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.footer-credit span{font-size:8px;letter-spacing:.2em;color:#999}
+.footer-credit a{font-size:clamp(10px,1.05vw,13px);font-weight:700;letter-spacing:.1em;color:var(--gold);white-space:nowrap;transition:color .2s ease}
+.footer-credit a:hover{color:#f3d36b}
+
 @media(max-width:900px){
  .topbar{height:72px;padding:0 6vw}.menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:0;right:0;background:#111;padding:25px 7vw;flex-direction:column;align-items:flex-start;gap:23px;border-bottom:1px solid #ffffff22}.nav-open{display:flex}
  .hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:60px 8vw 50px;order:1}.hero-photo{min-height:460px;order:2}.hero-photo:before{background:linear-gradient(0deg,#080808a8,transparent 30%)}.hero h1{font-size:clamp(58px,9vw,82px)}.hero-bottom{position:relative;padding:15px 7vw;left:auto;right:auto;bottom:auto;order:3}
@@ -140,15 +161,12 @@ img{display:block;max-width:100%}
  .hero-bottom{font-size:7px;letter-spacing:.13em}.section-pad{padding:72px 7vw}.intro-photo{height:420px;min-height:380px;aspect-ratio:4/5}.large-serif{font-size:43px}
  .opening-quote{padding:62px 22px}.opening-quote p{font-size:38px}
  .section-heading h2,.support h2{font-size:47px}.story-chapter .story-image{height:420px;min-height:370px;aspect-ratio:4/5}.chapter-copy h3{font-size:36px}.chapter-copy p{font-size:12px;line-height:1.95}
- .voice-wall{padding:80px 7vw}.voice-wall h2{font-size:48px}.voice-grid{grid-template-columns:1fr}.voice-card{min-height:120px;padding:23px}
+ .voice-wall{padding:80px 7vw}.voice-wall h2{font-size:48px}.voice-grid{grid-template-columns:1fr}.voice-card,.voice-card-trigger{min-height:135px}.voice-card-trigger{padding:23px}.voice-card-detail{padding:0 23px 22px}.faith-commitment{padding:68px 7vw}.faith-inner{padding-left:20px}.faith-commitment h2{font-size:40px}.footer-credit a{font-size:12px;white-space:normal}
  .continuing-image{height:420px;min-height:380px;aspect-ratio:4/5}.continuing h2{font-size:42px}
  .donate{padding:78px 7vw}.donate h2{font-size:47px}.pix-details{padding:25px 20px}.pix-qr{width:min(100%,260px)}
  .final-message{padding:90px 22px 100px}.final-message h2{font-size:52px}.footer{gap:15px}
 }
-.footer-contact{display:flex;flex-direction:column;align-items:flex-end;gap:13px}
-.footer-contact>a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:9px;letter-spacing:.1em;transition:color .2s ease}
-.footer-contact>a:hover,.footer-signature a:hover{color:#f3d36b}
-.footer-signature a{color:#e8b936;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:900px){.footer-contact{align-items:flex-start}}
+.brand-stamp{display:inline-grid;place-items:center;width:48px;height:48px;border:1px solid var(--gold);border-radius:3px;color:var(--gold);font-family:"Bodoni Moda",serif;font-size:31px;line-height:1}
+@media(max-width:900px){.footer{grid-template-columns:1fr;justify-items:center;text-align:center;gap:20px}.footer-center{order:3}.footer-credit{align-items:center;order:2}.footer .wordmark{order:1}.faith-commitment{padding:78px 8vw}.faith-inner{padding-left:25px}}
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
