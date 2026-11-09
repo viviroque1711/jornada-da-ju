@@ -110,26 +110,45 @@ export default function App() {
       </section>
 
       <section className="faith-commitment">
-        <div className="faith-inner">
+        <motion.div
+          className="faith-inner"
+          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeUp}
+        >
           <SectionLabel>MINHA FÉ, MINHA DECISÃO</SectionLabel>
           <h2>{faithDecision.title}</h2>
           {faithDecision.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <span className="faith-signature">— JULIANA</span>
-        </div>
+        </motion.div>
       </section>
 
       <section className="opening-quote">
-        <Quote className="quote-mark" />
-        <p>Nunca foi sobre um diagnóstico.</p>
-        <span>— JULIANA BATISTA</span>
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, scale: 0.96, y: 18 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Quote className="quote-mark" />
+          <p>Nunca foi sobre um diagnóstico.</p>
+          <span>— JULIANA BATISTA</span>
+        </motion.div>
       </section>
 
       <section className="journey section-pad" id="jornada">
-        <div className="section-heading">
+        <motion.div
+          className="section-heading"
+          initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeUp}
+        >
           <SectionLabel>02 — MINHA JORNADA</SectionLabel>
           <h2>Uma vida de capítulos.<br/><em>Muitas razões para continuar.</em></h2>
           <p>Vou contar, com minhas palavras, alguns dos momentos que marcaram esse caminho.</p>
-        </div>
+        </motion.div>
         <div className="story-chapters">
           {storySections.slice(1).map((chapter, index) => (
             <motion.article
@@ -152,6 +171,36 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      {campaign.video.src && (
+        <section className="video-interlude" aria-label="Um vídeo especial da Juliana">
+          <video
+            className="video-interlude-media"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={campaign.video.poster}
+            aria-label="Vídeo escolhido por Juliana"
+          >
+            <source src={campaign.video.src} type="video/mp4" />
+          </video>
+          <div className="video-interlude-shade" />
+          <motion.div
+            className="video-interlude-copy"
+            initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.25 }}
+            variants={fadeUp}
+          >
+            <SectionLabel>{campaign.video.eyebrow}</SectionLabel>
+            <h2>{campaign.video.headline}</h2>
+            <p>{campaign.video.caption}</p>
+          </motion.div>
+          <span className="video-interlude-note">UM MOMENTO DA MINHA VIDA, ALÉM DO TRATAMENTO</span>
+        </section>
+      )}
 
       <section className="voice-wall">
         <div className="voice-inner">
@@ -195,10 +244,16 @@ export default function App() {
       </section>
 
       <section className="continuing section-pad">
-        <div className="continuing-image">
+        <motion.div
+          className="continuing-image"
+          initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.8 }}
+        >
           <img src="/jornada-da-ju/images/juliana-hospital-heart.webp" alt="Juliana sorrindo no hospital e fazendo um coração com a mão." loading="lazy"/>
           <span>UM DIA DE CADA VEZ</span>
-        </div>
+        </motion.div>
         <div className="continuing-copy">
           <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
           <h2>Hoje, eu preciso de uma corrente que caminhe <em>comigo.</em></h2>
@@ -216,9 +271,22 @@ export default function App() {
           <p>Eu gostaria de contar com as pessoas que se sentirem motivadas pela minha história. Uma contribuição, por menor que seja, pode aliviar parte do peso financeiro desta caminhada. E compartilhar também ajuda minha mensagem a chegar mais longe.</p>
         </div>
         <div className="support-points">
-          <div><Heart/><h3>Contribua</h3><p>Qualquer valor é bem-vindo e será destinado à campanha.</p></div>
-          <div><MessageCircle/><h3>Compartilhe</h3><p>Ajude minha história a chegar a quem pode caminhar comigo.</p></div>
-          <div><ShieldCheck/><h3>Faça parte</h3><p>Seu gesto me ajuda a continuar e permite que esta história alcance outras pessoas.</p></div>
+          {[
+            { icon: <Heart/>, title: "Contribua", text: "Qualquer valor é bem-vindo e será destinado à campanha." },
+            { icon: <MessageCircle/>, title: "Compartilhe", text: "Ajude minha história a chegar a quem pode caminhar comigo." },
+            { icon: <ShieldCheck/>, title: "Faça parte", text: "Seu gesto me ajuda a continuar e permite que esta história alcance outras pessoas." }
+          ].map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ delay: index * 0.12, duration: 0.65 }}
+              whileHover={reduceMotion ? undefined : { y: -6 }}
+            >
+              {item.icon}<h3>{item.title}</h3><p>{item.text}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -253,11 +321,18 @@ export default function App() {
       </section>
 
       <section className="final-message">
-        <span className="brand-stamp" aria-label="Viva a Vida, Juliana">V.</span>
-        <p>Eu já atravessei muitos capítulos.</p>
-        <h2>Mas minha história<br/><em>continua sendo escrita.</em></h2>
-        <span>Obrigada por caminhar comigo.</span>
-        <strong>JULIANA BATISTA</strong>
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 26 }}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.35 }}
+          variants={fadeUp}
+        >
+          <span className="brand-stamp" aria-label="Viva a Vida, Juliana">V.</span>
+          <p>Eu já atravessei muitos capítulos.</p>
+          <h2>Mas minha história<br/><em>continua sendo escrita.</em></h2>
+          <span>Obrigada por caminhar comigo.</span>
+          <strong>JULIANA BATISTA</strong>
+        </motion.div>
       </section>
 
       <footer className="footer">
