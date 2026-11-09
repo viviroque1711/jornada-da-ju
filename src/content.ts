@@ -26,8 +26,8 @@ export const storySections = [
     title: "Eu tinha planos. Tinha projetos. Tinha uma vida acontecendo.",
     paragraphs: [
       "Como tantas pessoas, eu seguia fazendo planos, sonhando com novos projetos, cuidando das minhas coisas e imaginando o que ainda viveria. Até que um diagnóstico de câncer de mama chegou. Foi um baque. Uma notícia que parece parar o mundo por alguns instantes e faz a gente olhar para a própria vida de um jeito completamente diferente.",
-      "Eu precisei de um tempo para organizar tudo dentro de mim. Vieram o medo, as perguntas e a consciência de que começaria uma caminhada que eu não havia escolhido. Mas, depois de respirar e olhar para aquela realidade, entendi que precisava tomar uma decisão sobre como atravessaria aquele caminho.",
-      "Eu não podia escolher o que estava acontecendo com meu corpo. Mas podia colocar minha vida nas mãos de Deus e pedir que Ele me conduzisse. Decidi me colocar à disposição da vontade Dele, e que, se minha caminhada pudesse servir de inspiração para alguém, que minha história também fosse instrumento de esperança."
+      "Eu precisei de um tempo para organizar tudo dentro de mim. Vieram o medo, as perguntas e a consciência de que começaria uma caminhada que eu não havia escolhido. Aceitar que aquilo estava acontecendo não significava me entregar à doença: significava reconhecer a realidade e encontrar forças para começar o tratamento. Depois de respirar e olhar para aquela realidade, entendi que precisava tomar uma decisão sobre como atravessaria aquele caminho.",
+      "Eu não podia escolher o que estava acontecendo com meu corpo. Mas podia colocar minha vida nas mãos de Deus e pedir que Ele me conduzisse. Decidi me colocar à disposição da vontade Dele e ser instrumento em Suas mãos. Pedi que, se minha caminhada pudesse servir de inspiração para alguém, minha história também se transformasse em esperança para outras vidas."
     ],
     image: "/jornada-da-ju/images/juliana-portrait.webp",
     imageAlt: "Retrato pessoal de Juliana.",
@@ -102,5 +102,5 @@ export const campaignNeeds = {
   purpose:
     "Hoje, além de tudo o que essa caminhada exige de mim, existe também um desafio financeiro. O tratamento e as despesas que acompanham esse período pesam, e eu gostaria de contar com a ajuda das pessoas que se sentirem tocadas pela minha história. Cada contribuição pode me ajudar a continuar cuidando de mim e seguindo em frente.",
   inspiration:
-    "Eu não quero que minha história seja lembrada apenas pelos diagnósticos. Quero que ela alcance outras pessoas, incentive alguém a não perder a esperança, a procurar ajuda, a valorizar a vida. Se o que estou vivendo puder tocar uma pessoa e ajudá-la a encontrar força ou buscar cuidado, minha história também terá se transformado em serviço. Quero continuar vivendo — e, enquanto eu viver, quero que minha caminhada possa inspirar outras vidas."
+    "Eu não quero que minha história seja lembrada apenas pelos diagnósticos. Quero que ela alcance outras pessoas, incentive alguém a não perder a esperança, a procurar ajuda e a valorizar a vida. Meu desejo é que minha caminhada inspire alguém a buscar cuidado e, quem sabe, ajude a salvar uma vida. Quero continuar vivendo — e, enquanto eu viver, quero que minha história possa servir de instrumento nas mãos de Deus para tocar outras vidas."
 };
