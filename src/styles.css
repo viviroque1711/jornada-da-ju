@@ -240,3 +240,39 @@ img{display:block;max-width:100%}
 .video-audio-toggle:hover{background:#e8b936;color:#111;border-color:#e8b936}
 @media(max-width:900px){.video-audio-toggle{right:50%;transform:translateX(50%);bottom:22px}.video-interlude-note{bottom:67px}}
 @media(max-width:560px){.video-audio-toggle{bottom:18px;padding:10px 13px}.video-interlude-note{bottom:62px}}
+
+/* Correção específica do primeiro capítulo: proporção original e fotografia em cores. */
+.story-chapter:nth-child(1) .story-image{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:640 / 477;
+  background:#d7d2c8;
+}
+.story-chapter:nth-child(1) .story-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-height:0;
+  object-fit:cover!important;
+  object-position:center 49%;
+  filter:none!important;
+  background:transparent;
+}
+@media(max-width:900px){
+  .story-chapter:nth-child(1) .story-image{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:640 / 477;
+  }
+}
+@media(max-width:560px){
+  .story-chapter:nth-child(1) .story-image{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:640 / 477;
+  }
+}
