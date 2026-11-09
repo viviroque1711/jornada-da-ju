@@ -1,14 +1,14 @@
 /**
- * Narrativa em primeira pessoa elaborada a partir dos relatos compartilhados por Juliana.
- * Deve ser revisada e aprovada por ela antes de publicação definitiva.
- * Não interpretar nem acrescentar diagnósticos; preservar os termos que ela relatou.
+ * Texto editorial em primeira pessoa baseado nos relatos enviados por Juliana.
+ * A versão deve ser lida e aprovada por Juliana antes da divulgação pública.
+ * Os relatos médicos permanecem descritos como experiências contadas por ela.
  */
 export const campaign = {
   title: "Viva a Vida, Juliana!",
-  eyebrow: "UMA CORRENTE DE SOLIDARIEDADE",
-  heroHeadline: "Eu já enfrentei muitas batalhas. E continuo escolhendo a vida.",
+  eyebrow: "UMA HISTÓRIA DE FÉ, CORAGEM E VIDA",
+  heroHeadline: "Nunca foi sobre um diagnóstico.",
   heroDescription:
-    "Esta é a minha história — feita de recomeços, fé, coragem e pessoas que podem caminhar comigo.",
+    "Eu tinha uma vida cheia de planos, projetos e sonhos. Então, um diagnóstico chegou e mudou tudo. Esta é a história de como decidi continuar — e de por que hoje peço que você caminhe comigo.",
   heroImage: "/jornada-da-ju/images/juliana-hero.webp",
   pix: {
     copyPasteCode: "00020126580014br.gov.bcb.pix013697556e8f-e359-48a9-a415-b680ea4c4e685204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AECEAB9E23E3430529478630477E6",
@@ -22,15 +22,16 @@ export const storySections = [
   {
     id: "quem-sou",
     number: "01",
-    kicker: "ANTES DOS DIAGNÓSTICOS",
-    title: "Eu sou a Juliana. E minha história é muito maior que a doença.",
+    kicker: "ANTES DE TUDO MUDAR",
+    title: "Eu tinha planos. Tinha projetos. Tinha uma vida acontecendo.",
     paragraphs: [
-      "Quero que você me conheça para além dos hospitais, dos exames e dos tratamentos. Sou uma mulher com meus gostos, meus afetos, minha fé, meus momentos de alegria e uma vida inteira de lembranças.",
-      "Gosto de sorrir, de estar perto de quem amo e de guardar os momentos que fazem a vida valer a pena. Por isso, quando conto minha história, não quero falar apenas sobre o que enfrentei. Quero falar também sobre quem sou e sobre tudo o que ainda desejo viver."
+      "Como tantas pessoas, eu seguia fazendo planos, sonhando com novos projetos, cuidando das minhas coisas e imaginando o que ainda viveria. Até que um diagnóstico de câncer de mama chegou. Foi um baque. Uma notícia que parece parar o mundo por alguns instantes e faz a gente olhar para a própria vida de um jeito completamente diferente.",
+      "Eu precisei de um tempo para organizar tudo dentro de mim. Vieram o medo, as perguntas e a consciência de que começaria uma caminhada que eu não havia escolhido. Mas, depois de respirar e olhar para aquela realidade, entendi que precisava tomar uma decisão sobre como atravessaria aquele caminho.",
+      "Eu não podia escolher o que estava acontecendo com meu corpo. Mas podia colocar minha vida nas mãos de Deus e pedir que Ele me conduzisse. Decidi me colocar à disposição da vontade Dele, e que, se minha caminhada pudesse servir de inspiração para alguém, que minha história também fosse instrumento de esperança."
     ],
     image: "/jornada-da-ju/images/juliana-portrait.webp",
-    imageAlt: "Retrato de Juliana em um momento pessoal.",
-    imageCaption: "Eu, muito além dos capítulos difíceis."
+    imageAlt: "Retrato pessoal de Juliana.",
+    imageCaption: "Antes de qualquer diagnóstico, existe uma vida inteira."
   },
   {
     id: "primeira-batalha",
@@ -38,53 +39,54 @@ export const storySections = [
     kicker: "O PRIMEIRO RECOMEÇO",
     title: "Minha primeira batalha foi contra o câncer de mama.",
     paragraphs: [
-      "Foi o primeiro grande desafio que precisei enfrentar. O câncer de mama mudou minha vida e me levou a passar por uma cirurgia em que retirei parte da mama.",
-      "Não foi um caminho simples. Precisei encontrar forças para atravessar aquele momento, cuidar de mim e seguir em frente. Eu venci aquela primeira batalha — e continuei vivendo, fazendo planos e construindo novas lembranças."
+      "Para tratar o câncer de mama, passei por uma cirurgia e precisei retirar parte da mama. Foi um momento muito difícil, física e emocionalmente. Eu precisei reunir forças, atravessar o tratamento e aprender a conviver com tantas mudanças.",
+      "Naquele começo, eu esperava que fosse uma única batalha. Queria tratar, me recuperar e voltar aos meus planos. E, quando consegui vencer aquele primeiro câncer, segui vivendo, acreditando que aquele capítulo tinha ficado para trás."
     ],
     image: "/jornada-da-ju/images/juliana-hospital-v.webp",
     imageAlt: "Juliana em um registro pessoal durante uma passagem pelo hospital.",
-    imageCaption: "Um registro de uma das etapas da minha caminhada."
+    imageCaption: "Uma das imagens que guardam o começo da minha caminhada."
   },
   {
     id: "dez-anos-depois",
     number: "03",
-    kicker: "NOVOS DESAFIOS",
-    title: "Cerca de dez anos depois, precisei recomeçar mais uma vez.",
+    kicker: "QUANDO OS DESAFIOS VOLTARAM",
+    title: "Cerca de dez anos depois, os diagnósticos continuaram aparecendo.",
     paragraphs: [
-      "Quando já havia passado tanto tempo desde a primeira batalha, novos diagnósticos voltaram a fazer parte da minha vida. Nos meus relatos, compartilhei que enfrentei câncer de intestino e câncer de vesícula, que identifiquei como colangiocarcinoma. Também falei sobre tumores no pulmão e alterações no fígado.",
-      "Vieram novos tratamentos, cirurgias e períodos de muita incerteza. Em uma das minhas publicações, escrevi com a força que eu sentia naquele momento: “VENCI TODOS ELES”. Era a minha maneira de registrar cada etapa que eu havia atravessado."
+      "Eu imaginava que o câncer tinha ficado no passado. Mas, cerca de dez anos depois, novas notícias começaram a chegar. Em meus relatos, contei que enfrentei câncer de intestino e câncer de vesícula, que identifiquei como colangiocarcinoma. Também compartilhei sobre tumores no pulmão e alterações no fígado.",
+      "Eu esperava que fosse um diagnóstico, uma etapa, um tratamento. Mas não foi assim. Os desafios foram surgindo novamente, um depois do outro. Cada notícia trazia um novo impacto, novas conversas, novos cuidados e mais uma etapa para atravessar.",
+      "Mesmo quando eu não tinha todas as respostas, eu escolhia seguir. Em uma das minhas publicações, escrevi: “VENCI TODOS ELES”. Era a forma como eu registrava as batalhas que já tinha atravessado — e a força que buscava para continuar."
     ],
     image: "/jornada-da-ju/images/juliana-hospital-heart.webp",
     imageAlt: "Juliana sorrindo e fazendo um coração com a mão durante uma internação.",
-    imageCaption: "Mesmo nos dias difíceis, procurei guardar espaço para o sorriso."
+    imageCaption: "Eu continuei encontrando motivos para sorrir."
   },
   {
     id: "remissao",
     number: "04",
     kicker: "QUANDO EU ESPERAVA RESPIRAR",
-    title: "Quando eu acreditava estar perto da remissão, veio outra notícia.",
+    title: "Quando achei que a remissão estava perto, veio outra notícia.",
     paragraphs: [
-      "Depois de quatro anos de luta, eu acreditava que estava perto de entrar em remissão. Eu imaginava que poderia começar uma fase diferente, com um pouco mais de tranquilidade.",
-      "Mas, naquele momento, recebi a notícia de que haviam sido encontrados quatro tumores no fígado. Foi mais uma mudança inesperada no caminho, quando eu já alimentava a esperança de respirar um pouco mais aliviada.",
-      "Em um dos meus relatos, falei sobre a fé, a força dos pensamentos e a decisão de seguir em frente. Escrevi: “Acredite! Desistir não me representa. Avante!”"
+      "Depois de quatro anos de luta, eu acreditava que estava perto de entrar em remissão. Eu já imaginava a possibilidade de viver uma fase com mais tranquilidade. Depois de tudo o que havia enfrentado, aquela esperança significava muito para mim.",
+      "Mas, justamente quando eu pensava que poderia respirar um pouco mais aliviada, recebi a notícia de que haviam sido encontrados quatro tumores no fígado. Foi outro baque. Mais uma vez, precisei reorganizar minhas emoções e encontrar forças para continuar.",
+      "Em um dos meus relatos, deixei registrada uma frase que traduzia a decisão que eu tentava renovar a cada dia: “Desistir não me representa. Avante!”"
     ],
     image: "/jornada-da-ju/images/juliana-headwrap.webp",
     imageAlt: "Juliana em um registro pessoal durante seu tratamento.",
-    imageCaption: "Um momento da caminhada que compartilhei com quem estava perto de mim."
+    imageCaption: "A fé e a decisão de continuar estiveram comigo em cada etapa."
   },
   {
     id: "continuar",
     number: "05",
     kicker: "A JORNADA CONTINUA",
-    title: "Enfrentei novas complicações. E continuei o tratamento.",
+    title: "Ainda surgiram outras notícias. E eu continuei escolhendo viver.",
     paragraphs: [
-      "Mais recentemente, contei que estava fazendo quimioterapia havia cerca de um ano e que haviam sido identificadas novas alterações no pâncreas e nas vias biliares, além de uma neoplasia no pulmão.",
-      "Durante uma biópsia no pulmão, passei por uma complicação muito séria. Relatei uma hemorragia pulmonar, uma fístula de ar e a formação de um coágulo no pulmão. Depois disso, enfrentei outras complicações que descrevi como pneumonia e embolias, além de episódios de sangramento pela boca.",
-      "Foi um período assustador e difícil. Mas, depois de tudo isso, compartilhei que estava continuando a quimioterapia. E escrevi do meu jeito, com a fé que me acompanha: “VENCEMOSSSS EM NOME DE JESUS!”"
+      "Em um relato mais recente, contei que estava fazendo quimioterapia havia cerca de um ano e que tinham sido identificadas novas alterações no pâncreas e nas vias biliares, além de uma neoplasia no pulmão.",
+      "Durante uma biópsia pulmonar, passei por uma complicação muito séria. Relatei uma hemorragia pulmonar, uma fístula de ar e a formação de um coágulo no pulmão. Depois disso, enfrentei outras complicações que descrevi como pneumonia e embolias, além de episódios de sangramento pela boca.",
+      "Foi um período assustador. Mas, depois de tudo isso, compartilhei que estava continuando a quimioterapia. A minha fé continua fazendo parte da forma como atravesso cada etapa. Como escrevi naquele momento: “VENCEMOS EM NOME DE JESUS!”"
     ],
     image: "/jornada-da-ju/images/juliana-hospital-heart.webp",
     imageAlt: "Juliana sorrindo no hospital e fazendo um coração com a mão.",
-    imageCaption: "Mais um registro de coragem, fé e vontade de continuar."
+    imageCaption: "Um dia de cada vez. Um passo de cada vez."
   }
 ];
 
@@ -98,5 +100,7 @@ export const voiceQuotes = [
 export const campaignNeeds = {
   goal: null as number | null,
   purpose:
-    "Estou pedindo ajuda para contribuir com as despesas desta caminhada e do meu tratamento. A família atualizará esta página com a finalidade detalhada da arrecadação e a prestação de contas."
+    "Hoje, além de tudo o que essa caminhada exige de mim, existe também um desafio financeiro. O tratamento e as despesas que acompanham esse período pesam, e eu gostaria de contar com a ajuda das pessoas que se sentirem tocadas pela minha história. Cada contribuição pode me ajudar a continuar cuidando de mim e seguindo em frente.",
+  inspiration:
+    "Eu não quero que minha história seja lembrada apenas pelos diagnósticos. Quero que ela alcance outras pessoas, incentive alguém a não perder a esperança, a procurar ajuda, a valorizar a vida. Se o que estou vivendo puder tocar uma pessoa e ajudá-la a encontrar força ou buscar cuidado, minha história também terá se transformado em serviço. Quero continuar vivendo — e, enquanto eu viver, quero que minha caminhada possa inspirar outras vidas."
 };
