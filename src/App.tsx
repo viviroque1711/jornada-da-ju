@@ -5,7 +5,7 @@ import {
   ArrowDown, ArrowUpRight, Heart, Copy, Check, Menu, X,
   MessageCircle, ShieldCheck, Quote
 } from "lucide-react";
-import { campaign, storySections, voiceQuotes, campaignNeeds } from "./content";
+import { campaign, storySections, voiceQuotes, campaignNeeds, faithDecision } from "./content";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
