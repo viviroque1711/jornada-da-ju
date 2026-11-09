@@ -207,3 +207,31 @@ img{display:block;max-width:100%}
  .hero-photo img,.story-image img,.continuing-image img,.section-label span{animation:none!important;transition:none!important}
  .story-image:hover img,.continuing-image:hover img{transform:none!important}
 }
+
+/* Vídeo vertical da Juliana: preservar o enquadramento original e criar profundidade no fundo. */
+.video-interlude{min-height:620px;height:min(78vh,780px);background:#090909;display:block}
+.video-interlude-background{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;object-position:center 34%;filter:blur(24px) brightness(.26) saturate(.58);transform:scale(1.08)}
+.video-interlude-portrait{position:absolute;z-index:1;top:0;left:63%;transform:translateX(-50%);height:100%;width:auto;max-width:48%;object-fit:contain;object-position:center;background:transparent;filter:brightness(.98)}
+.video-interlude-shade{z-index:2;background:linear-gradient(90deg,#080808e8 0%,#080808c8 30%,#08080828 58%,#08080888 100%),linear-gradient(0deg,#080808c9 0%,transparent 32%,#08080835 100%)}
+.video-interlude-copy{position:absolute;z-index:3;left:7vw;top:50%;transform:translateY(-50%);width:min(390px,32vw);text-align:left;padding:0}
+.video-interlude-copy .section-label{justify-content:flex-start}
+.video-interlude-copy h2{font-size:clamp(38px,4.5vw,62px);line-height:1.04;margin:24px 0 16px}
+.video-interlude-copy p{font-size:clamp(21px,2vw,28px);line-height:1.24;margin:0;color:#e5ded0}
+.video-interlude-note{z-index:3;text-align:left;left:7vw;right:auto;bottom:28px;color:#e1c66f}
+@media(max-width:900px){
+ .video-interlude{min-height:680px;height:78vh;max-height:820px}
+ .video-interlude-portrait{left:50%;height:100%;max-width:82%}
+ .video-interlude-shade{background:linear-gradient(0deg,#080808ef 0%,#080808bf 26%,transparent 56%,#08080835 100%)}
+ .video-interlude-copy{left:7vw;right:7vw;top:auto;bottom:62px;transform:none;width:auto;text-align:center;padding:0 8px}
+ .video-interlude-copy .section-label{justify-content:center}
+ .video-interlude-copy h2{font-size:clamp(36px,8vw,54px);margin:17px 0 10px}
+ .video-interlude-copy p{font-size:21px;max-width:520px}
+ .video-interlude-note{left:0;right:0;bottom:22px;text-align:center;font-size:7px;letter-spacing:.14em}
+}
+@media(max-width:560px){
+ .video-interlude{min-height:650px;height:78svh;max-height:760px}
+ .video-interlude-portrait{height:100%;max-width:100%}
+ .video-interlude-copy{bottom:58px}
+ .video-interlude-copy h2{font-size:40px}
+ .video-interlude-copy p{font-size:19px;line-height:1.2}
+}
