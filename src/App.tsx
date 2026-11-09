@@ -9,7 +9,6 @@ import {
   Check,
   Menu,
   X,
-  Instagram,
   MessageCircle,
   ShieldCheck,
   Sparkles,
@@ -173,7 +172,7 @@ export default function App() {
               <h3>Contribua no seu tempo, do seu jeito.</h3>
               <p>O pagamento será destinado à conta indicada pela família. Antes de confirmar, confira os dados do beneficiário exibidos pelo seu banco.</p>
               <div className="beneficiary"><small>RESPONSÁVEL PELO RECEBIMENTO</small><strong>{campaign.pix.beneficiaryDisplayName}</strong><span>PicPay · chave aleatória</span></div>
-              <button className="button button-gold button-disabled" disabled title="Disponível após validação do código Pix"><Copy size={16}/> CÓDIGO PIX EM VALIDAÇÃO</button>
+              {campaign.pix.copyPasteCode ? (\n                <button className="button button-gold" onClick={copyPix}>{copied ? <Check size={16}/> : <Copy size={16}/>} {copied ? "CÓDIGO COPIADO" : "COPIAR CÓDIGO PIX"}</button>\n              ) : (\n                <button className="button button-gold button-disabled" disabled title="Disponível após validação do código Pix"><Copy size={16}/> CÓDIGO PIX EM VALIDAÇÃO</button>\n              )}
               <small className="security-note">A contribuição será habilitada após validação do QR Code e do código Pix Copia e Cola.</small>
             </div>
           </div>
