@@ -42,7 +42,7 @@ export const storySections = [
       "Para tratar o câncer de mama, passei por uma cirurgia e precisei retirar parte da mama. Foi um momento muito difícil, física e emocionalmente. Eu precisei reunir forças, atravessar o tratamento e aprender a conviver com tantas mudanças.",
       "Naquele começo, eu esperava que fosse uma única batalha. Queria tratar, me recuperar e voltar aos meus planos. E, quando consegui vencer aquele primeiro câncer, segui vivendo, acreditando que aquele capítulo tinha ficado para trás."
     ],
-    image: "/jornada-da-ju/images/juliana-primeiro-capitulo.webp",
+    image: "/jornada-da-ju/images/juliana-hospital-v.webp?v=20261109-2",
     imageAlt: "Juliana em um registro pessoal durante uma passagem pelo hospital.",
     imageCaption: "Uma das imagens que guardam o começo da minha caminhada."
   },
