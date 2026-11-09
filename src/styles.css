@@ -295,3 +295,33 @@ img{display:block;max-width:100%}
 .continuing-image:hover img{
   filter:saturate(1.12) contrast(1.04)!important;
 }
+
+/* Retrato alternativo do primeiro capítulo: enquadramento vertical, em cor e sem cortes. */
+.story-chapter:nth-child(1) .story-image{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:4 / 5!important;
+  background:#171512;
+}
+.story-chapter:nth-child(1) .story-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-height:0;
+  object-fit:cover!important;
+  object-position:center 32%;
+  filter:none!important;
+  background:transparent;
+}
+@media(max-width:900px){
+  .story-chapter:nth-child(1) .story-image{
+    height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:4 / 5!important;
+  }
+}
+@media(max-width:560px){
+  .story-chapter:nth-child(1) .story-image{
+    height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:4 / 5!important;
+  }
+}
