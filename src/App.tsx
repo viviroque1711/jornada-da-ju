@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDown, ArrowUpRight, Heart, Copy, Check, Menu, X,
-  MessageCircle, ShieldCheck, Sparkles, Quote
+  MessageCircle, ShieldCheck, Quote
 } from "lucide-react";
 import { campaign, storySections, voiceQuotes, campaignNeeds } from "./content";
 
@@ -19,7 +19,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 function StoryImage({ src, alt, caption, className = "" }: { src: string; alt: string; caption: string; className?: string }) {
   return (
     <figure className={`story-image ${className}`}>
-      <img src={src} alt={alt} loading="lazy" />
+      <img src={src} alt={alt} loading="eager" decoding="async" />
       <figcaption>{caption}</figcaption>
     </figure>
   );
@@ -28,6 +28,7 @@ function StoryImage({ src, alt, caption, className = "" }: { src: string; alt: s
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [activeQuote, setActiveQuote] = useState<number | null>(null);
   const reduceMotion = useReducedMotion();
 
   async function copyPix() {
@@ -108,6 +109,15 @@ export default function App() {
         </motion.div>
       </section>
 
+      <section className="faith-commitment">
+        <div className="faith-inner">
+          <SectionLabel>MINHA FÉ, MINHA DECISÃO</SectionLabel>
+          <h2>{faithDecision.title}</h2>
+          {faithDecision.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <span className="faith-signature">— JULIANA</span>
+        </div>
+      </section>
+
       <section className="opening-quote">
         <Quote className="quote-mark" />
         <p>Nunca foi sobre um diagnóstico.</p>
@@ -147,19 +157,38 @@ export default function App() {
         <div className="voice-inner">
           <SectionLabel>03 — PALAVRAS QUE SÃO MINHAS</SectionLabel>
           <h2>Minha fé. Minha voz.<br/><em>Meu jeito de seguir.</em></h2>
+          <p className="voice-intro">Cada uma dessas frases guarda um pedaço da minha caminhada. Toque em cada uma para conhecer o que ela representa para mim.</p>
           <div className="voice-grid">
-            {voiceQuotes.map((quote, index) => (
-              <motion.div
-                className="voice-card"
-                key={quote}
+            {voiceQuotes.map((item, index) => (
+              <motion.article
+                className={activeQuote === index ? "voice-card voice-card-open" : "voice-card"}
+                key={item.phrase}
                 initial={reduceMotion ? false : { opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08, duration: 0.6 }}
               >
-                <span>0{index + 1}</span>
-                <p>“{quote}”</p>
-              </motion.div>
+                <button
+                  className="voice-card-trigger"
+                  type="button"
+                  aria-expanded={activeQuote === index}
+                  onClick={() => setActiveQuote(activeQuote === index ? null : index)}
+                >
+                  <span className="voice-card-number">0{index + 1}</span>
+                  <span className="voice-card-phrase">“{item.phrase}”</span>
+                  <span className="voice-card-action">{activeQuote === index ? "FECHAR" : "TOQUE PARA EXPLORAR"} <span aria-hidden="true">{activeQuote === index ? "−" : "+"}</span></span>
+                </button>
+                {activeQuote === index && (
+                  <motion.div
+                    className="voice-card-detail"
+                    initial={reduceMotion ? false : { opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p>{item.detail}</p>
+                  </motion.div>
+                )}
+              </motion.article>
             ))}
           </div>
         </div>
@@ -224,7 +253,7 @@ export default function App() {
       </section>
 
       <section className="final-message">
-        <Sparkles/>
+        <span className="brand-stamp" aria-label="Viva a Vida, Juliana">V.</span>
         <p>Eu já atravessei muitos capítulos.</p>
         <h2>Mas minha história<br/><em>continua sendo escrita.</em></h2>
         <span>Obrigada por caminhar comigo.</span>
@@ -233,12 +262,15 @@ export default function App() {
 
       <footer className="footer">
         <a className="wordmark" href="#inicio"><span className="wordmark-mark">V.</span><span>VIVA A VIDA <b>JULIANA</b></span></a>
-        <p>Uma história real. Uma corrente de solidariedade.</p>
-        <div className="footer-contact">
-          <a href="https://wa.me/5511973967161" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">
-            <MessageCircle size={14}/> Fale conosco pelo WhatsApp
+        <div className="footer-center">
+          <p>Uma história real. Uma corrente de solidariedade.</p>
+          <a className="footer-whatsapp" href="https://wa.me/5511973967161" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">
+            <MessageCircle size={15}/> Fale conosco pelo WhatsApp
           </a>
-          <span className="footer-signature">Desenvolvido por <a href="https://roquebusinessevolution.com/" target="_blank" rel="noreferrer">Roque Business Evolution</a></span>
+        </div>
+        <div className="footer-credit">
+          <span>DESENVOLVIDO POR</span>
+          <a href="https://roquebusinessevolution.com/" target="_blank" rel="noreferrer">ROQUE BUSINESS EVOLUTION</a>
         </div>
       </footer>
     </main>
