@@ -49,9 +49,9 @@ export const storySections = [
       "Para tratar o câncer de mama, passei por uma cirurgia e precisei retirar parte da mama. Foi um momento muito difícil, física e emocionalmente. Eu precisei reunir forças, atravessar o tratamento e aprender a conviver com tantas mudanças.",
       "Naquele começo, eu esperava que fosse uma única batalha. Queria tratar, me recuperar e voltar aos meus planos. E, quando consegui vencer aquele primeiro câncer, segui vivendo, acreditando que aquele capítulo tinha ficado para trás."
     ],
-    image: "/jornada-da-ju/images/juliana-capitulo-retrato.webp?v=20261109-1",
-    imageAlt: "Retrato de Juliana com blazer preto e lenço estampado.",
-    imageCaption: "Um retrato meu — a mulher que existe para além de cada diagnóstico."
+    image: "/jornada-da-ju/images/juliana-primeiro-cancer-final.webp?v=20261109-1",
+    imageAlt: "Juliana em um leito hospitalar, fazendo sinal de vitória com a mão.",
+    imageCaption: "Um registro da minha primeira batalha — e da força que encontrei para seguir."
   },
   {
     id: "dez-anos-depois",
