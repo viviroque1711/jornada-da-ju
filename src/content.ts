@@ -77,9 +77,9 @@ export const storySections = [
       "Mas, justamente quando eu pensava que poderia respirar um pouco mais aliviada, recebi a notícia de que haviam sido encontrados quatro tumores no fígado. Foi outro baque. Mais uma vez, precisei reorganizar minhas emoções e encontrar forças para continuar.",
       "Em um dos meus relatos, deixei registrada uma frase que traduzia a decisão que eu tentava renovar a cada dia: “Desistir não me representa. Avante!”"
     ],
-    image: "/jornada-da-ju/images/juliana-headwrap.webp",
-    imageAlt: "Juliana em um registro pessoal durante seu tratamento.",
-    imageCaption: "A fé e a decisão de continuar estiveram comigo em cada etapa."
+    image: "/jornada-da-ju/images/juliana-sorrindo-oculos.webp?v=20261109-1",
+    imageAlt: "Juliana sorrindo, usando óculos escuros, em um registro pessoal.",
+    imageCaption: "A alegria também faz parte da minha história."
   },
   {
     id: "continuar",
@@ -91,9 +91,9 @@ export const storySections = [
       "Durante uma biópsia pulmonar, passei por uma complicação muito séria. Relatei uma hemorragia pulmonar, uma fístula de ar e a formação de um coágulo no pulmão. Depois disso, enfrentei outras complicações que descrevi como pneumonia e embolias, além de episódios de sangramento pela boca.",
       "Foi um período assustador. Mas, depois de tudo isso, compartilhei que estava continuando a quimioterapia. A minha fé continua fazendo parte da forma como atravesso cada etapa. Como escrevi naquele momento: “VENCEMOS EM NOME DE JESUS!”"
     ],
-    image: "/jornada-da-ju/images/juliana-hospital-heart.webp",
-    imageAlt: "Juliana sorrindo no hospital e fazendo um coração com a mão.",
-    imageCaption: "Um dia de cada vez. Um passo de cada vez."
+    image: "/jornada-da-ju/images/juliana-recuperacao-hospital.webp?v=20261109-1",
+    imageAlt: "Juliana em um registro pessoal no ambiente hospitalar, durante sua caminhada.",
+    imageCaption: "Mesmo nos dias delicados, sigo encontrando forças para continuar."
   }
 ];
 
