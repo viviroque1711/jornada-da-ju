@@ -192,7 +192,6 @@ export default function App() {
           <video
             className="video-interlude-portrait"
             autoPlay
-            muted
             loop
             playsInline
             preload="metadata"
