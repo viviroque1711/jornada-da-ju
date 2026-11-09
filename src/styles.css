@@ -276,3 +276,22 @@ img{display:block;max-width:100%}
     aspect-ratio:640 / 477;
   }
 }
+
+/* Cor seletiva: vida e retratos em cor; registros de tratamento preservam o tom documental. */
+.hero-photo img{
+  filter:saturate(1.08) contrast(1.025)!important;
+}
+.story-chapter:nth-child(1) .story-image img,
+.story-chapter:nth-child(2) .story-image img{
+  filter:saturate(1.08) contrast(1.025)!important;
+}
+.story-chapter:nth-child(1) .story-image:hover img,
+.story-chapter:nth-child(2) .story-image:hover img{
+  filter:saturate(1.12) contrast(1.04)!important;
+}
+.continuing-image img{
+  filter:saturate(1.08) contrast(1.025)!important;
+}
+.continuing-image:hover img{
+  filter:saturate(1.12) contrast(1.04)!important;
+}
