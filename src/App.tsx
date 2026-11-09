@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDown, ArrowUpRight, Heart, Copy, Check, Menu, X,
-  MessageCircle, ShieldCheck, Sparkles, Quote, ChevronRight
+  MessageCircle, ShieldCheck, Sparkles, Quote
 } from "lucide-react";
 import { campaign, storySections, voiceQuotes, campaignNeeds } from "./content";
 
