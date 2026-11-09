@@ -49,9 +49,9 @@ export const storySections = [
       "Para tratar o câncer de mama, passei por uma cirurgia e precisei retirar parte da mama. Foi um momento muito difícil, física e emocionalmente. Eu precisei reunir forças, atravessar o tratamento e aprender a conviver com tantas mudanças.",
       "Naquele começo, eu esperava que fosse uma única batalha. Queria tratar, me recuperar e voltar aos meus planos. E, quando consegui vencer aquele primeiro câncer, segui vivendo, acreditando que aquele capítulo tinha ficado para trás."
     ],
-    image: "/jornada-da-ju/images/juliana-hospital-v.webp?v=20261109-3",
-    imageAlt: "Juliana em um registro pessoal durante uma passagem pelo hospital.",
-    imageCaption: "Uma das imagens que guardam o começo da minha caminhada."
+    image: "/jornada-da-ju/images/juliana-capitulo-retrato.webp?v=20261109-1",
+    imageAlt: "Retrato de Juliana com blazer preto e lenço estampado.",
+    imageCaption: "Um retrato meu — a mulher que existe para além de cada diagnóstico."
   },
   {
     id: "dez-anos-depois",
@@ -128,7 +128,7 @@ export const faithDecision = {
 export const campaignNeeds = {
   goal: null as number | null,
   purpose:
-    "Hoje, além de tudo o que essa caminhada exige de mim, existe também um desafio financeiro. O tratamento e as despesas que acompanham esse período pesam, e eu gostaria de contar com a ajuda das pessoas que se sentirem tocadas pela minha história. Cada contribuição pode me ajudar a continuar cuidando de mim e seguindo em frente.",
+    "Eu e minha família estamos fazendo o melhor que podemos para seguir com o tratamento e cuidar de cada etapa. Ainda assim, o desafio financeiro existe: as despesas dessa caminhada pesam e se somam. Depois de pensar muito, decidi pedir ajuda. Não é um pedido fácil, mas entendi que também preciso permitir que outras pessoas caminhem comigo.",
   inspiration:
-    "Eu não quero que minha história seja lembrada apenas pelos diagnósticos. Quero que ela alcance outras pessoas, incentive alguém a não perder a esperança, a procurar ajuda e a valorizar a vida. Meu desejo é que minha caminhada inspire alguém a buscar cuidado e, quem sabe, ajude a salvar uma vida. Quero continuar vivendo — e, enquanto eu viver, quero que minha história possa servir de instrumento nas mãos de Deus para tocar outras vidas."
+    "Se minha história tocar você e estiver ao seu alcance, sua ajuda será muito importante. Qualquer contribuição, dentro das suas possibilidades, será recebida com gratidão. Ajude somente se puder, sem comprometer suas próprias necessidades. E, se não puder contribuir financeiramente, compartilhar esta página também é uma forma de apoio."
 };
