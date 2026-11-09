@@ -11,7 +11,7 @@ export const campaign = {
     "Eu tinha uma vida cheia de planos, projetos e sonhos. Então, um diagnóstico chegou e mudou tudo. Esta é a história de como decidi continuar — e de por que hoje peço que você caminhe comigo.",
   heroImage: "/jornada-da-ju/images/juliana-hero.webp",
   video: {
-    src: "",
+    src: "/jornada-da-ju/video/juliana-background.mp4",
     poster: "/jornada-da-ju/images/juliana-hero.webp",
     eyebrow: "UM RESPIRO NO MEIO DA JORNADA",
     headline: "Há vida em cada momento que ainda quero viver.",
