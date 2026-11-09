@@ -1,10 +1,15 @@
 # Viva a Vida, Juliana!
 
-Uma história de coragem, fé e superação. Uma corrente de solidariedade para apoiar Juliana em sua jornada pela vida.
+Uma campanha digital de solidariedade, narrada em primeira pessoa e construída a partir da história e das fotografias autorizadas de Juliana Batista.
 
-## Projeto
+## Experiência
 
-Site narrativo e responsivo para a campanha **Viva a Vida, Juliana!**, com identidade editorial em preto, branco e dourado.
+- Narrativa em primeira pessoa organizada em capítulos.
+- Fotografias reais distribuídas ao longo da jornada.
+- Identidade editorial em preto, branco e amarelo dourado.
+- Design responsivo e animações suaves.
+- QR Code Pix e botão de cópia do BR Code.
+- Compartilhamento por WhatsApp.
 
 ## Stack
 
@@ -13,37 +18,40 @@ Site narrativo e responsivo para a campanha **Viva a Vida, Juliana!**, com ident
 - Framer Motion
 - Lucide React
 
-## Rodar localmente
+## Desenvolvimento
 
 ```bash
 npm install
 npm run dev
 ```
 
-Gerar build:
+Build de produção:
 
 ```bash
 npm run build
 ```
 
-## Conteúdo e privacidade
+## Conteúdo e aprovação
 
-O conteúdo editorial está em `src/content.ts`.
+O texto de primeira pessoa é um rascunho editorial escrito com base nos relatos enviados para a campanha. Juliana deve revisar e aprovar a redação, os dados de saúde, a cronologia e cada imagem antes da divulgação definitiva.
 
-Antes de publicar:
-- Obter autorização expressa de Juliana para cada fotografia, relato e informação médica.
-- Confirmar diagnósticos e cronologia com Juliana; não publicar inferências médicas.
-- Confirmar a finalidade e a meta da arrecadação com Juliana e sua família.
-- Validar o BR Code Pix Copia e Cola com o banco e conferir o nome da beneficiária.
-- Inserir apenas fotografias que Juliana autorizou expressamente.
-- Não inserir laudos completos, documentos pessoais ou dados bancários desnecessários.
+A campanha deve:
+- Evitar prognósticos, interpretações médicas ou detalhes que Juliana não confirmou.
+- Explicar claramente a finalidade e a responsabilidade pelo recebimento das doações.
+- Atualizar periodicamente a prestação de contas.
+- Não publicar documentos médicos, dados bancários completos ou informações pessoais desnecessárias.
 
-A área Pix permanece desabilitada até a validação do código oficial.
+## Pix
 
-## Estrutura
+A pasta `public/images` contém o QR Code estático compartilhado para a campanha. O BR Code Copia e Cola está configurado em `src/content.ts` e o QR Code foi decodificado para conferir que os dados correspondem.
 
-- `src/App.tsx`: página e componentes da experiência.
-- `src/content.ts`: conteúdo da campanha e configuração Pix.
+**Antes de divulgar amplamente:** fazer uma contribuição de teste de baixo valor em outro aplicativo bancário, conferir se o nome apresentado é **Lourdes Aparecida Batista**, e confirmar o crédito no extrato da conta destinatária. O site não intermedeia pagamentos nem confirma recebimentos.
+
+## Arquivos principais
+
+- `src/App.tsx`: estrutura da experiência.
+- `src/content.ts`: narrativa, conteúdo e configuração Pix.
 - `src/styles.css`: identidade visual, responsividade e movimento.
+- `public/images/`: fotos autorizadas e QR Code da campanha.
 
-Este repositório é público. Não adicionar informações médicas privadas, documentos ou imagens sem autorização.
+Este repositório é público. Somente incluir fotografias e informações com autorização expressa.
