@@ -10,7 +10,7 @@ export const campaign = {
   heroDescription:
     "Uma história de coragem, fé e esperança. Conheça Juliana e faça parte de uma corrente de solidariedade.",
   // Substituir somente após autorização e disponibilização das fotografias originais.
-  heroImage: "",
+  heroImage: "/images/juliana-hero.webp",
   pix: {
     // Inserir o BR Code Copia e Cola validado pelo banco. Não usar a chave Pix isolada aqui.
     copyPasteCode: "",
