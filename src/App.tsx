@@ -96,7 +96,7 @@ export default function App() {
           <span className="vertical-note">ANTES DE CADA DIAGNÓSTICO, EXISTE UMA VIDA INTEIRA</span>
         </div>
         <StoryImage
-          src="/images/juliana-portrait.webp"
+          src="/jornada-da-ju/images/juliana-portrait.webp"
           alt="Retrato de Juliana em um momento pessoal."
           caption="Eu, muito além dos capítulos difíceis."
           className="intro-photo"
@@ -167,7 +167,7 @@ export default function App() {
 
       <section className="continuing section-pad">
         <div className="continuing-image">
-          <img src="/images/juliana-hospital-heart.webp" alt="Juliana sorrindo no hospital e fazendo um coração com a mão." loading="lazy"/>
+          <img src="/jornada-da-ju/images/juliana-hospital-heart.webp" alt="Juliana sorrindo no hospital e fazendo um coração com a mão." loading="lazy"/>
           <span>UM DIA DE CADA VEZ</span>
         </div>
         <div className="continuing-copy">
