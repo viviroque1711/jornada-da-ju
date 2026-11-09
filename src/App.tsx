@@ -68,7 +68,7 @@ export default function App() {
           <a href="#minha-historia" onClick={closeMenu}>Minha história</a>
           <a href="#jornada" onClick={closeMenu}>Minha jornada</a>
           <a href="#corrente" onClick={closeMenu}>Como ajudar</a>
-          <a className="nav-cta" href="#contribuir" onClick={closeMenu}>Contribua <ArrowUpRight size={15}/></a>
+          <a className="nav-cta" href="#contribuir" onClick={closeMenu}>Caminhe comigo <ArrowUpRight size={15}/></a>
         </nav>
       </header>
 
@@ -285,11 +285,11 @@ export default function App() {
         </motion.div>
         <div className="continuing-copy">
           <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
-          <h2>Hoje, eu preciso de uma corrente que caminhe <em>comigo.</em></h2>
+          <h2>Há momentos em que aceitar ajuda também é <em>coragem.</em></h2>
           <p>{campaignNeeds.purpose}</p>
           <p>{campaignNeeds.inspiration}</p>
-          <p>Se você se sentir tocado pela minha história e puder contribuir, qualquer valor será recebido com gratidão. Se não puder, compartilhar esta página também é uma forma de caminhar comigo.</p>
-          <a className="button button-gold" href="#contribuir">QUERO RECEBER SUA AJUDA <ArrowUpRight size={16}/></a>
+          <p>Sua ajuda é muito importante. Se puder caminhar comigo por meio de uma contribuição, ficarei profundamente grata. Se não puder, tudo bem: compartilhar minha história também é um gesto de carinho.</p>
+          <a className="button button-gold" href="#contribuir">QUERO AJUDAR COMO POSSO <ArrowUpRight size={16}/></a>
         </div>
       </section>
 
@@ -297,13 +297,13 @@ export default function App() {
         <div className="support-heading">
           <SectionLabel>05 — UMA CORRENTE DE SOLIDARIEDADE</SectionLabel>
           <h2>Um gesto pode chegar<br/><em>mais longe do que imaginamos.</em></h2>
-          <p>Eu gostaria de contar com as pessoas que se sentirem motivadas pela minha história. Uma contribuição, por menor que seja, pode aliviar parte do peso financeiro desta caminhada. E compartilhar também ajuda minha mensagem a chegar mais longe.</p>
+          <p>Eu e minha família estamos fazendo o melhor que podemos. Mesmo assim, há momentos em que precisamos aceitar uma mão estendida. Se você se sentir tocado pela minha história e puder ajudar, sua presença será muito importante. Faça isso somente dentro das suas possibilidades.</p>
         </div>
         <div className="support-points">
           {[
-            { icon: <Heart/>, title: "Contribua", text: "Qualquer valor é bem-vindo e será destinado à campanha." },
+            { icon: <Heart/>, title: "Sua ajuda importa", text: "Se estiver ao seu alcance, qualquer contribuição será recebida com gratidão." },
             { icon: <MessageCircle/>, title: "Compartilhe", text: "Ajude minha história a chegar a quem pode caminhar comigo." },
-            { icon: <ShieldCheck/>, title: "Faça parte", text: "Seu gesto me ajuda a continuar e permite que esta história alcance outras pessoas." }
+            { icon: <ShieldCheck/>, title: "Esteja comigo", text: "Um gesto de carinho ou uma mensagem de esperança também fazem diferença." }
           ].map((item, index) => (
             <motion.div
               key={item.title}
@@ -323,7 +323,7 @@ export default function App() {
         <div className="donate-inner">
           <SectionLabel>06 — SUA SOLIDARIEDADE FAZ PARTE DA MINHA HISTÓRIA</SectionLabel>
           <h2>Se puder, caminhe<br/><em>um trecho comigo.</em></h2>
-          <p>Você pode contribuir com qualquer valor pelo Pix. O recebimento é feito pela minha mãe, Lourdes Aparecida Batista, que está responsável por esta arrecadação.</p>
+          <p>Se estiver ao seu alcance, você pode contribuir com qualquer valor pelo Pix. Cada gesto será recebido com gratidão. O recebimento é feito pela minha mãe, Lourdes Aparecida Batista, que está responsável por esta arrecadação.</p>
           <div className="pix-panel">
             <div className="pix-visual">
               <img className="pix-qr" src={campaign.pix.qrImage} alt="QR Code Pix da campanha Viva a Vida, Juliana."/>
