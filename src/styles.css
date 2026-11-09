@@ -148,4 +148,10 @@ img{display:block;max-width:100%}
  .donate{padding:78px 7vw}.donate h2{font-size:47px}.pix-details{padding:25px 20px}.pix-qr{width:min(100%,260px)}
  .final-message{padding:90px 22px 100px}.final-message h2{font-size:52px}.footer{gap:15px}
 }
+.footer-contact{display:flex;flex-direction:column;align-items:flex-end;gap:13px}
+.footer-contact>a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:9px;letter-spacing:.1em;transition:color .2s ease}
+.footer-contact>a:hover,.footer-signature a:hover{color:#f3d36b}
+.footer-signature a{color:#e8b936;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.footer-contact{align-items:flex-start}}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
