@@ -209,7 +209,7 @@ export default function App() {
               <div className="beneficiary">
                 <small>RESPONSÁVEL PELO RECEBIMENTO</small>
                 <strong>{campaign.pix.beneficiaryDisplayName}</strong>
-                <span>Chave Pix aleatória · PicPay</span>
+                <span>Chave Pix aleatória · valor livre</span>
               </div>
               <button className="button button-gold" onClick={copyPix}>
                 {copied ? <Check size={16}/> : <Copy size={16}/>}
