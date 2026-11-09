@@ -288,7 +288,7 @@ export default function App() {
           <h2>Há momentos em que aceitar ajuda também é <em>coragem.</em></h2>
           <p>{campaignNeeds.purpose}</p>
           <p>{campaignNeeds.inspiration}</p>
-          <p>Sua ajuda é muito importante. Se puder caminhar comigo por meio de uma contribuição, ficarei profundamente grata. Se não puder, tudo bem: compartilhar minha história também é um gesto de carinho.</p>
+          <p>{campaignNeeds.request}</p>
           <a className="button button-gold" href="#contribuir">QUERO AJUDAR COMO POSSO <ArrowUpRight size={16}/></a>
         </div>
       </section>
@@ -331,7 +331,7 @@ export default function App() {
             </div>
             <div className="pix-details">
               <span className="timeline-kicker">PIX — VALOR LIVRE</span>
-              <h3>Contribua do seu jeito.</h3>
+              <h3>Sua ajuda, do seu jeito.</h3>
               <p>Leia o QR Code ou copie o código Pix. Antes de confirmar, confira se o nome exibido pelo seu banco é <strong>Lourdes Aparecida Batista</strong>.</p>
               <div className="beneficiary">
                 <small>RESPONSÁVEL PELO RECEBIMENTO</small>
