@@ -18,7 +18,7 @@ Uma campanha digital de solidariedade, narrada em primeira pessoa e construída 
 - Framer Motion
 - Lucide React
 
-## Desenvolvimento
+## Prévia online\n\nA publicação de pré-visualização é feita pelo GitHub Pages a partir da branch de desenvolvimento.\n\n## Desenvolvimento
 
 ```bash
 npm install
