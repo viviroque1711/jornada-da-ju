@@ -1073,3 +1073,40 @@ img{display:block;max-width:100%}
   .final-message>span{font-size:23px}
   .footer-center p{font-size:11px;line-height:1.7}
 }
+
+
+/* ROQUE BUSINESS EVOLUTION — brand signature in header and footer */
+.roque-brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  line-height:0;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.roque-brand:hover{opacity:.88;transform:translateY(-1px)}
+.roque-brand img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain}
+.roque-brand-header{
+  height:70px;
+  width:62px;
+  margin-left:-4px;
+}
+.roque-brand-footer{
+  height:122px;
+  width:106px;
+  justify-self:start;
+}
+.footer-credit{
+  align-items:flex-end;
+}
+@media(max-width:900px){
+  .topbar{justify-content:space-between}
+  .roque-brand-header{height:62px;width:54px;margin-left:-3px}
+  .footer{align-items:center}
+  .roque-brand-footer{height:116px;width:101px;justify-self:center}
+  .footer-credit{align-items:center}
+}
+@media(max-width:560px){
+  .roque-brand-header{height:60px;width:52px}
+  .roque-brand-footer{height:108px;width:94px}
+}
