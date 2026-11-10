@@ -986,3 +986,90 @@ img{display:block;max-width:100%}
     bottom:24px;
   }
 }
+
+
+/* MOBILE FINISHING PASS — editorial rhythm, readability and spacing */
+@media(max-width:900px){
+  .section-pad{padding-top:76px;padding-bottom:76px}
+  .body-copy,.chapter-copy p,.continuing-copy>p,.faith-commitment p{
+    font-size:13px;
+    line-height:1.85;
+    letter-spacing:.005em;
+  }
+  .intro-content .body-copy p{margin:0 0 18px}
+  .intro-content .body-copy p:last-child{margin-bottom:0}
+  .chapter-hook .chapter-number{font-size:clamp(48px,13vw,60px);margin-bottom:12px}
+  .chapter-hook .timeline-kicker{display:block;line-height:1.6}
+  .chapter-hook h3{max-width:18ch;line-height:1.12;letter-spacing:-.025em}
+  .story-chapter .story-image,
+  .story-chapter.reverse .story-image{
+    height:auto;
+    min-height:0;
+    max-height:none;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:#d5d1c7;
+  }
+  .story-chapter .story-image img,
+  .story-chapter.reverse .story-image img{
+    width:100%;
+    height:100%;
+    min-height:0;
+    object-fit:contain;
+    object-position:center;
+  }
+  .story-image figcaption{font-size:8px;line-height:1.6;padding:28px 14px 13px}
+  .chapter-copy{max-width:66ch;margin:0 auto}
+  .chapter-copy p{margin:0 0 17px}
+  .faith-inner{max-width:680px}
+  .faith-commitment h2{line-height:1.1}
+  .continuing-image{height:auto;min-height:0;max-height:none;aspect-ratio:4/5}
+  .continuing-image img{height:100%;object-fit:contain}
+  .video-interlude{min-height:620px;height:auto;padding:0 0 28px;display:flex;flex-direction:column;justify-content:flex-end}
+  .video-interlude-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .video-interlude-copy{width:100%;padding:0 7vw 92px;text-align:left}
+  .video-interlude-copy .section-label{justify-content:flex-start}
+  .video-interlude-copy h2{font-size:clamp(38px,10vw,52px);line-height:1.04;margin:20px 0 14px}
+  .video-interlude-copy p{font-size:clamp(21px,5.8vw,27px);line-height:1.2}
+  .video-audio-toggle{z-index:3}
+  .video-interlude-note{display:none}
+  .final-message{padding:88px 7vw 96px}
+  .final-message>div{display:flex;flex-direction:column;align-items:center}
+  .final-message>span{display:block;margin:24px 0 10px;line-height:1.35}
+  .final-message>strong{display:block;margin-top:8px;line-height:1.6}
+  .footer{padding:34px 7vw 42px;gap:20px}
+  .footer-credit{width:100%;gap:10px}
+  .footer-credit a{display:block;text-align:center;line-height:1.5;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+  .pix-details{padding:30px 24px}
+  .pix-details h3{font-size:clamp(28px,8vw,34px);line-height:1.12}
+  .pix-details>p,.security-note{font-size:11px;line-height:1.8}
+  .pix-details .button{width:100%;min-height:58px}
+  .beneficiary{gap:9px;padding:20px 0}
+  .beneficiary small,.beneficiary span{font-size:9px;line-height:1.6}
+  .beneficiary strong{font-size:14px;line-height:1.4}
+}
+@media(max-width:560px){
+  .section-pad{padding:66px 7vw}
+  .section-heading{margin-bottom:48px}
+  .section-heading h2,.support h2{font-size:clamp(39px,10.5vw,47px);line-height:1.08}
+  .section-heading>p,.support-heading>p{font-size:13px;line-height:1.8}
+  .chapter-hook h3{font-size:clamp(31px,8.5vw,37px);max-width:17ch;line-height:1.14}
+  .story-chapters{gap:52px}
+  .story-chapter,.story-chapter.reverse{gap:18px}
+  .chapter-copy p{font-size:12.5px;line-height:1.85}
+  .intro-content .body-copy{font-size:13px;line-height:1.85}
+  .intro-photo{height:auto;min-height:0;max-height:none;aspect-ratio:4/5}
+  .intro-photo img{height:100%;object-fit:contain}
+  .faith-commitment{padding:66px 7vw}
+  .faith-inner{padding-left:19px}
+  .faith-commitment h2{font-size:clamp(35px,9.5vw,42px)}
+  .faith-commitment p{font-size:12.5px;line-height:1.85}
+  .video-interlude{min-height:590px}
+  .video-interlude-copy{padding:0 7vw 88px}
+  .video-interlude-copy h2{font-size:clamp(36px,9.5vw,47px)}
+  .continuing h2{font-size:clamp(36px,9.5vw,42px);line-height:1.1}
+  .continuing-copy>p{font-size:12.5px;line-height:1.85}
+  .final-message h2{font-size:clamp(43px,11vw,52px);line-height:1.06}
+  .final-message>span{font-size:23px}
+  .footer-center p{font-size:11px;line-height:1.7}
+}
