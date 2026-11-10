@@ -19,7 +19,7 @@ export const campaign = {
   },
   pix: {
     copyPasteCode: "00020126900014br.gov.bcb.pix01364f588e81-0d7a-4b49-bafc-9181487c35610228CAMPANHA VIVA A VIDA JULIANA5204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AF260B4BCF5F26570552663042B70",
-    qrImage: "/jornada-da-ju/images/pix-juliana.png",
+    qrImage: "/jornada-da-ju/images/pix-juliana.png?v=20261109-2",
     beneficiaryDisplayName: "Lourdes Aparecida Batista",
     enabled: true,
   },
