@@ -75,14 +75,18 @@ export default function App() {
       <section className="hero" id="inicio">
         <div className="hero-copy">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-inner">
-            <SectionLabel>{campaign.eyebrow}</SectionLabel>
-            <h1>Nunca foi<br/><em>sobre um</em><br/><em>diagnóstico.</em></h1>
-            <div className="hero-rule"><span /></div>
-            <p className="hero-manifesto">Eu tinha planos, projetos e sonhos. Até que um diagnóstico mudou tudo.</p>
-            <p className="hero-description">{campaign.heroDescription}</p>
-            <div className="hero-actions">
-              <a className="button button-gold" href="#contribuir">CAMINHE COMIGO <ArrowUpRight size={16}/></a>
-              <a className="text-link" href="#minha-historia">LEIA MINHA HISTÓRIA <ArrowDown size={15}/></a>
+            <div className="hero-hook">
+              <SectionLabel>{campaign.eyebrow}</SectionLabel>
+              <h1>Nunca foi<br/><em>sobre um</em><br/><em>diagnóstico.</em></h1>
+              <div className="hero-rule"><span /></div>
+              <p className="hero-manifesto">Eu tinha planos, projetos e sonhos. Até que um diagnóstico mudou tudo.</p>
+            </div>
+            <div className="hero-supporting">
+              <p className="hero-description">{campaign.heroDescription}</p>
+              <div className="hero-actions">
+                <a className="button button-gold" href="#contribuir">CAMINHE COMIGO <ArrowUpRight size={16}/></a>
+                <a className="text-link" href="#minha-historia">LEIA MINHA HISTÓRIA <ArrowDown size={15}/></a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -98,6 +102,9 @@ export default function App() {
           <SectionLabel>01 — QUEM EU SOU</SectionLabel>
           <span className="vertical-note">ANTES DE CADA DIAGNÓSTICO, EXISTE UMA VIDA INTEIRA</span>
         </div>
+        <div className="intro-hook">
+          <p className="large-serif">Antes de conhecer minhas batalhas, quero que você conheça <em>a mulher.</em></p>
+        </div>
         <StoryImage
           src="/jornada-da-ju/images/juliana-portrait.webp"
           alt="Retrato de Juliana em um momento pessoal."
@@ -105,7 +112,6 @@ export default function App() {
           className="intro-photo"
         />
         <motion.div className="intro-content" initial={reduceMotion ? false : "hidden"} whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={fadeUp}>
-          <p className="large-serif">Antes de conhecer minhas batalhas, quero que você conheça <em>a mulher.</em></p>
           {storySections[0].paragraphs.map((paragraph) => <p className="body-copy" key={paragraph}>{paragraph}</p>)}
           <p className="signature">Com carinho,<br/><strong>Juliana</strong></p>
         </motion.div>
@@ -162,11 +168,13 @@ export default function App() {
               viewport={{ once: true, amount: 0.16 }}
               variants={fadeUp}
             >
-              <StoryImage src={chapter.image} alt={chapter.imageAlt} caption={chapter.imageCaption}/>
-              <div className="chapter-copy">
+              <div className="chapter-hook">
                 <span className="chapter-number">{chapter.number}</span>
                 <span className="timeline-kicker">{chapter.kicker}</span>
                 <h3>{chapter.title}</h3>
+              </div>
+              <StoryImage src={chapter.image} alt={chapter.imageAlt} caption={chapter.imageCaption}/>
+              <div className="chapter-copy">
                 {chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </motion.article>
@@ -273,6 +281,10 @@ export default function App() {
       </section>
 
       <section className="continuing section-pad">
+        <div className="continuing-hook">
+          <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
+          <h2>Há momentos em que aceitar ajuda também é <em>coragem.</em></h2>
+        </div>
         <motion.div
           className="continuing-image"
           initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
@@ -284,8 +296,6 @@ export default function App() {
           <span>UM DIA DE CADA VEZ</span>
         </motion.div>
         <div className="continuing-copy">
-          <SectionLabel>04 — POR QUE ESTOU CONTANDO</SectionLabel>
-          <h2>Há momentos em que aceitar ajuda também é <em>coragem.</em></h2>
           <p>{campaignNeeds.purpose}</p>
           <p>{campaignNeeds.inspiration}</p>
           <p>{campaignNeeds.request}</p>
