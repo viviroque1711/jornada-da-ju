@@ -898,3 +898,91 @@ img{display:block;max-width:100%}
   .continuing-image{grid-column:2;grid-row:1 / span 2;width:100%;max-width:540px;justify-self:center}
   .continuing-image img{width:100%!important;height:auto!important;max-height:620px;object-fit:contain!important}
 }
+
+
+/* DESKTOP VISUAL QA — tighten intro rhythm and prevent video copy clipping */
+@media(min-width:901px){
+  .intro{
+    position:relative;
+    grid-template-columns:minmax(0,1.05fr) minmax(390px,.95fr);
+    grid-template-rows:auto auto auto;
+    column-gap:clamp(48px,6vw,100px);
+    row-gap:clamp(18px,2vw,28px);
+    align-items:start;
+  }
+  .intro-side{
+    grid-column:1;
+    grid-row:1;
+    position:relative;
+    align-self:start;
+    min-height:0;
+    padding-bottom:0;
+  }
+  .intro-side .vertical-note{
+    position:absolute;
+    left:-30px;
+    top:44px;
+    writing-mode:vertical-rl;
+    max-height:240px;
+    margin:0;
+    pointer-events:none;
+  }
+  .intro-hook{
+    grid-column:1;
+    grid-row:2;
+    align-self:start;
+    margin:0;
+    max-width:700px;
+  }
+  .intro-content{
+    grid-column:1;
+    grid-row:3;
+    align-self:start;
+    max-width:680px;
+  }
+  .intro-photo{
+    grid-column:2;
+    grid-row:1 / span 3;
+    align-self:center;
+    justify-self:center;
+    width:100%;
+    max-width:540px;
+    margin:0;
+  }
+  .intro-photo img{
+    width:100%!important;
+    height:auto!important;
+    max-height:640px;
+    object-fit:contain!important;
+  }
+
+  .video-interlude{
+    min-height:650px;
+    height:min(78vh,800px);
+    max-height:800px;
+    overflow:hidden;
+  }
+  .video-interlude-copy{
+    left:7vw;
+    top:50%;
+    transform:translateY(-50%);
+    width:min(500px,36vw);
+    max-height:calc(100% - 120px);
+    padding:0;
+    overflow:visible;
+  }
+  .video-interlude-copy h2{
+    font-size:clamp(36px,3.8vw,56px);
+    line-height:1.02;
+    margin:20px 0 14px;
+    overflow-wrap:normal;
+  }
+  .video-interlude-copy p{
+    max-width:480px;
+    font-size:clamp(19px,1.65vw,24px);
+    line-height:1.22;
+  }
+  .video-interlude-note{
+    bottom:24px;
+  }
+}
