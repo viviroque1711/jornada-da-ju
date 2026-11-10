@@ -375,3 +375,17 @@ img{display:block;max-width:100%}
 .story-chapter:nth-child(4) .story-image:hover img{
   filter:saturate(1.12) contrast(1.04)!important;
 }
+
+
+/* Retrato da seção 04: movimento editorial sutil, sem deslocar o enquadramento. */
+@keyframes julianaPortraitBreath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.022); }
+}
+.continuing-image img {
+  animation: julianaPortraitBreath 18s ease-in-out 1.2s infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .continuing-image img { animation: none !important; will-change: auto; }
+}
