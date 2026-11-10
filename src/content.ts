@@ -18,7 +18,7 @@ export const campaign = {
     caption: "Um pedacinho de mim, das coisas que amo e dos motivos que me fazem continuar."
   },
   pix: {
-    copyPasteCode: "00020126580014br.gov.bcb.pix013697556e8f-e359-48a9-a415-b680ea4c4e685204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AECEAB9E23E3430529478630477E6",
+    copyPasteCode: "00020126900014br.gov.bcb.pix01364f588e81-0d7a-4b49-bafc-9181487c35610228CAMPANHA VIVA A VIDA JULIANA5204000053039865802BR5925LOURDES APARECIDA BATISTA6009Sao Paulo62290525REC6AF260B4BCF5F26570552663042B70",
     qrImage: "/jornada-da-ju/images/pix-juliana.png",
     beneficiaryDisplayName: "Lourdes Aparecida Batista",
     enabled: true,
