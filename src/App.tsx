@@ -280,7 +280,7 @@ export default function App() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/jornada-da-ju/images/juliana-white-blazer.webp?v=20261109-1" alt="Retrato de Juliana com cabelo escuro e blazer branco." loading="lazy"/>
+          <img src="/jornada-da-ju/images/juliana-secao04-v2.webp?v=20261110-2" alt="Retrato de Juliana com cabelo escuro e blazer branco." loading="lazy"/>
           <span>UM DIA DE CADA VEZ</span>
         </motion.div>
         <div className="continuing-copy">
