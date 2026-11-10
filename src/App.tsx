@@ -57,9 +57,8 @@ export default function App() {
   return (
     <main>
       <header className="topbar">
-        <a className="wordmark" href="#inicio" onClick={closeMenu}>
-          <span className="wordmark-mark">V.</span>
-          <span>VIVA A VIDA <b>JULIANA</b></span>
+        <a className="roque-brand roque-brand-header" href="https://roquebusinessevolution.com/" target="_blank" rel="noreferrer" aria-label="Roque Business Evolution — site desenvolvido por">
+          <img src="/jornada-da-ju/images/roque-business-evolution.svg" alt="Roque Business Evolution"/>
         </a>
         <button className="menu-toggle" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X /> : <Menu />}
@@ -375,7 +374,9 @@ export default function App() {
       </section>
 
       <footer className="footer">
-        <a className="wordmark" href="#inicio"><span className="wordmark-mark">V.</span><span>VIVA A VIDA <b>JULIANA</b></span></a>
+        <a className="roque-brand roque-brand-footer" href="https://roquebusinessevolution.com/" target="_blank" rel="noreferrer" aria-label="Roque Business Evolution — conhecer a empresa">
+          <img src="/jornada-da-ju/images/roque-business-evolution.svg" alt="Roque Business Evolution"/>
+        </a>
         <div className="footer-center">
           <p>Uma história real. Uma corrente de solidariedade.</p>
           <a className="footer-whatsapp" href="https://wa.me/5511973967161" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">
