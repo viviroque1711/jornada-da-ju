@@ -63,7 +63,6 @@ function Footer() {
 
 function HomePage() {
   const [active, setActive] = useState(0);
-  const reduceMotion = useReducedMotion();
   const milestones = [
     { title: "Câncer de mama", detail: "A primeira batalha. Cirurgia, tratamento e um recomeço." },
     { title: "Intestino e vesícula", detail: "Cerca de dez anos depois, novos diagnósticos mudaram novamente o caminho." },
