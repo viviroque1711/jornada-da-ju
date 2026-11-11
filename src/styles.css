@@ -1574,3 +1574,54 @@ img{display:block;max-width:100%}
   .home-invite{font-size:10px}
   .home-hero-actions .button{min-height:42px}
 }
+
+
+/* HOME PIX + BRAND FOOTER */
+.home-pix{
+  padding:clamp(58px,7vw,96px) 7vw;
+  background:#eae5dc;
+  color:#24211c;
+}
+.home-pix-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);
+  align-items:center;
+  gap:clamp(36px,7vw,100px);
+  width:min(100%,1050px);
+  margin:0 auto;
+}
+.home-pix-copy{display:flex;flex-direction:column;align-items:flex-start}
+.home-pix-copy h2{
+  margin:20px 0 16px;
+  font-family:"Bodoni Moda",serif;
+  font-size:clamp(42px,5vw,66px);
+  font-weight:500;
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+.home-pix-copy h2 em{font-family:"Cormorant Garamond",serif;color:#9c7938;font-weight:500}
+.home-pix-copy>p{max-width:520px;color:#625c52;font-size:14px;line-height:1.8}
+.home-pix-beneficiary{display:flex;flex-direction:column;gap:6px;margin:14px 0 22px;padding:14px 17px;border-left:2px solid #b8944f;background:#e1dacc}
+.home-pix-beneficiary small,.home-pix-security{color:#71695e;font-size:9px;line-height:1.65;letter-spacing:.04em}
+.home-pix-beneficiary strong{font-size:14px}
+.home-pix-beneficiary span{color:#71695e;font-size:11px}
+.home-pix-copy .button{min-height:50px}
+.home-pix-security{max-width:410px;margin-top:13px;letter-spacing:0}
+.home-pix-qr-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:26px;background:#fff;border:1px solid #ddd5c7}
+.home-pix-qr-wrap img{width:min(100%,310px);aspect-ratio:1;object-fit:contain}
+.home-pix-qr-wrap span{color:#71695e;font-size:9px;letter-spacing:.16em;text-align:center}
+.footer{background:#080808!important;color:#f6f4ef!important;border-top:1px solid #ffffff20}
+.footer p,.footer-center p{color:#c8c3b9}
+.footer-credit span{color:#999187}
+.footer-credit a,.footer-whatsapp{color:#d5b35d}
+@media(max-width:700px){
+ .home-pix{padding:58px 7vw}
+ .home-pix-inner{grid-template-columns:1fr;gap:30px}
+ .home-pix-copy{align-items:center;text-align:center}
+ .home-pix-copy .section-label{justify-content:center}
+ .home-pix-copy>p{font-size:12px}
+ .home-pix-beneficiary{width:100%;max-width:420px;align-items:center}
+ .home-pix-security{max-width:420px}
+ .home-pix-qr-wrap{width:min(100%,420px);margin:0 auto;padding:20px}
+ .home-pix-qr-wrap img{width:min(100%,270px)}
+}
