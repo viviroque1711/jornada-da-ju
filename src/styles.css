@@ -1625,3 +1625,38 @@ img{display:block;max-width:100%}
  .home-pix-qr-wrap{width:min(100%,420px);margin:0 auto;padding:20px}
  .home-pix-qr-wrap img{width:min(100%,270px)}
 }
+
+
+/* HOME — concise Pix invitation, QR on left and copy action on right */
+.home-pix{padding:clamp(48px,6vw,78px) 7vw;background:#eae5dc;color:#24211c}
+.home-pix-inner{display:flex;flex-direction:column;gap:34px;width:min(100%,1050px);margin:0 auto}
+.home-pix-heading{width:100%;text-align:center}
+.home-pix-heading h2{margin:0 0 7px;font-family:"Bodoni Moda",serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.08;letter-spacing:-.035em}
+.home-pix-heading h2 span,.home-pix-heading p span{color:#9c7938}
+.home-pix-heading p{margin:0 0 13px;font-family:"Cormorant Garamond",serif;font-size:clamp(23px,2.7vw,32px);line-height:1.2}
+.home-pix-heading strong{display:block;color:#8b6b35;font-size:clamp(10px,1vw,13px);font-weight:700;letter-spacing:.12em;line-height:1.6}
+.home-pix-content{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(32px,6vw,76px);width:min(100%,850px);margin:0 auto}
+.home-pix-qr-wrap{grid-column:1;grid-row:1;width:100%;max-width:340px;justify-self:center;padding:22px;background:#fff;border:1px solid #d9d0c0}
+.home-pix-qr-wrap img{width:100%;aspect-ratio:1;object-fit:contain}
+.home-pix-copy{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.home-pix-copy h3{margin:14px 0 8px;font-family:"Bodoni Moda",serif;font-size:clamp(27px,3vw,38px);font-weight:500;line-height:1.1}
+.home-pix-copy>p{max-width:440px;margin:0 0 8px;color:#625c52;font-size:13px;line-height:1.7}
+.home-pix-beneficiary{width:100%;max-width:420px}
+.home-pix-copy .button{margin-top:2px;min-height:50px}
+.home-pix-security{max-width:430px}
+.home-pix-qr-wrap span{display:block;margin-top:12px;text-align:center}
+@media(max-width:700px){
+ .home-pix{padding:50px 7vw}
+ .home-pix-inner{gap:25px}
+ .home-pix-heading h2{font-size:clamp(29px,8vw,38px)}
+ .home-pix-heading p{font-size:23px}
+ .home-pix-heading strong{font-size:9px;letter-spacing:.08em}
+ .home-pix-content{grid-template-columns:1fr;gap:24px}
+ .home-pix-qr-wrap{grid-column:1;grid-row:1;width:min(100%,300px);padding:18px}
+ .home-pix-copy{grid-column:1;grid-row:2;align-items:center;text-align:center}
+ .home-pix-copy .section-label{justify-content:center}
+ .home-pix-copy>p{font-size:12px}
+ .home-pix-beneficiary{align-items:center}
+ .home-pix-security{max-width:400px}
+}
+.home-hero-media video{object-fit:contain;object-position:center;background:#171615}
