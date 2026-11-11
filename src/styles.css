@@ -1248,3 +1248,159 @@ img{display:block;max-width:100%}
  .inner-page-next{padding:32px 7vw 58px}
  .help-page .support{padding-top:56px;padding-bottom:56px}
 }
+
+
+/* HOME HERO — centered content, full video visible, viewport-safe on all screens */
+.home-hero{
+  position:relative;
+  display:grid;
+  place-items:center;
+  isolation:isolate;
+  width:100%;
+  height:calc(100svh - 82px);
+  min-height:560px;
+  max-height:920px;
+  padding:clamp(34px,5vh,64px) 24px 66px;
+  overflow:hidden;
+  background:#171615;
+  color:#f5f1e9;
+}
+.home-hero-media{
+  position:absolute;
+  z-index:-3;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-height:0;
+  margin:0;
+  overflow:hidden;
+  background:#171615;
+}
+.home-hero-media video{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:0;
+  object-fit:contain;
+  object-position:center center;
+  background:#171615;
+}
+.home-hero-overlay{
+  position:absolute;
+  z-index:-2;
+  inset:0;
+  background:linear-gradient(180deg,rgba(10,9,8,.44) 0%,rgba(10,9,8,.56) 45%,rgba(10,9,8,.78) 100%);
+  pointer-events:none;
+}
+.home-hero-copy{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:min(100%,780px);
+  margin:0 auto;
+  padding:24px 20px;
+  text-align:center;
+}
+.home-hero-copy .section-label{justify-content:center}
+.home-hero-copy h1{
+  margin:clamp(18px,3vh,30px) 0 18px;
+  max-width:100%;
+  font-size:clamp(48px,6.2vw,82px);
+  line-height:.99;
+  text-wrap:balance;
+}
+.home-lead{
+  max-width:620px;
+  margin:0 auto 12px;
+  font-size:clamp(14px,1.35vw,18px);
+  line-height:1.65;
+  text-wrap:pretty;
+}
+.home-invite{
+  max-width:570px;
+  margin:0 auto;
+  color:#e0d9cd;
+  font-size:clamp(12px,1.05vw,14px);
+  line-height:1.7;
+}
+.home-hero-copy .home-actions{justify-content:center;margin-top:26px}
+.home-video-caption{
+  position:absolute;
+  z-index:1;
+  left:20px;
+  right:20px;
+  bottom:43px;
+  color:#eee8dc;
+  text-align:center;
+  font-size:8px;
+  letter-spacing:.2em;
+  line-height:1.5;
+  pointer-events:none;
+}
+.home-hero-bottom{
+  position:absolute;
+  z-index:1;
+  left:clamp(20px,5vw,72px);
+  right:clamp(20px,5vw,72px);
+  bottom:16px;
+  display:flex;
+  justify-content:space-between;
+  color:#c5bcae;
+  font-size:8px;
+  letter-spacing:.18em;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .home-hero{
+    height:calc(100svh - 82px);
+    min-height:540px;
+    max-height:860px;
+    padding:28px 18px 68px;
+  }
+  .home-hero-media{height:100%;min-height:0;margin:0}
+  .home-hero-media video{height:100%;min-height:0;object-fit:contain}
+  .home-hero-copy{order:initial;padding:18px 12px}
+  .home-hero-copy h1{font-size:clamp(46px,8vw,68px)}
+  .home-hero-bottom{position:absolute;order:initial;padding:0}
+}
+@media(max-width:620px){
+  .home-hero{
+    height:calc(100svh - 72px);
+    min-height:570px;
+    max-height:820px;
+    padding:24px 14px 72px;
+  }
+  .home-hero-copy{width:100%;padding:12px 8px}
+  .home-hero-copy .section-label{font-size:8px;letter-spacing:.16em}
+  .home-hero-copy h1{
+    margin:18px 0 15px;
+    font-size:clamp(43px,11vw,58px);
+    line-height:1;
+  }
+  .home-lead{max-width:440px;font-size:13px;line-height:1.55}
+  .home-invite{max-width:400px;font-size:11px;line-height:1.55}
+  .home-hero-copy .home-actions{gap:14px;margin-top:20px}
+  .home-hero-copy .home-actions .button{min-height:48px;padding:13px 17px;font-size:9px}
+  .home-hero-copy .home-actions .text-link{font-size:8px}
+  .home-video-caption{bottom:42px;font-size:7px;letter-spacing:.13em}
+  .home-hero-bottom{left:14px;right:14px;bottom:13px;font-size:7px}
+}
+@media(max-width:380px){
+  .home-hero{min-height:550px;padding-left:10px;padding-right:10px}
+  .home-hero-copy h1{font-size:42px}
+  .home-lead{font-size:12px}
+  .home-hero-copy .home-actions{flex-direction:column;gap:12px}
+}
+@media(max-height:680px) and (min-width:621px){
+  .home-hero{min-height:500px;padding-top:20px;padding-bottom:60px}
+  .home-hero-copy h1{font-size:clamp(42px,5vw,62px);margin:12px 0}
+  .home-lead{font-size:13px}
+  .home-invite{font-size:11px}
+  .home-hero-copy .home-actions{margin-top:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-hero-media video{animation:none}
+}
