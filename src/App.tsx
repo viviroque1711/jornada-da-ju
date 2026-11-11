@@ -95,10 +95,9 @@ function HomePage() {
             <SectionLabel>UMA HISTÓRIA DE FÉ, CORAGEM E VIDA</SectionLabel>
             <h1>Uma história <em>de superação.</em></h1>
             <p className="home-lead">A Juliana continua sua jornada, enfrentando desafios e escolhendo viver. E você também pode fazer parte dessa história.</p>
-            <p className="home-invite">Ajude a manter viva a esperança de encontrar caminhos para uma cura definitiva.</p>
           </div>
           <div className="home-hero-media">
-            <video controls playsInline preload="metadata" poster={campaign.video.poster} aria-label="Vídeo de Juliana. Use os controles para reproduzir e ativar o áudio.">
+            <video autoPlay muted loop controls playsInline preload="auto" poster={campaign.video.poster} aria-label="Vídeo de Juliana. Use os controles para ativar o áudio.">
               <source src={campaign.video.src} type="video/mp4"/>
             </video>
           </div>
@@ -138,35 +137,35 @@ function HomePage() {
           <strong>{milestones[active].title}</strong>
           <p>{milestones[active].detail}</p>
         </div>
-        <div className="home-timeline-bottom">
-          <p>A história da Juliana continua. E você pode fazer parte dos próximos capítulos.</p>
-          <div className="home-actions">
-            <a className="button button-gold" href="#/minha-jornada">CONHEÇA MINHA JORNADA <ArrowUpRight size={16}/></a>
-            <a className="text-link" href="#/como-ajudar">FAÇA PARTE DESSA HISTÓRIA <Heart size={15}/></a>
-          </div>
-        </div>
       </section>
 
       <section className="home-pix" id="como-ajudar">
         <div className="home-pix-inner">
-          <div className="home-pix-copy">
-            <SectionLabel>VOCÊ TAMBÉM PODE FAZER PARTE</SectionLabel>
-            <h2>Ajude a manter viva<br/><em>a esperança.</em></h2>
-            <p>Se estiver ao seu alcance, você pode contribuir com qualquer valor pelo Pix. Cada gesto será recebido com gratidão.</p>
-            <div className="home-pix-beneficiary">
-              <small>RESPONSÁVEL PELO RECEBIMENTO</small>
-              <strong>{campaign.pix.beneficiaryDisplayName}</strong>
-              <span>Pix · valor livre</span>
+          <header className="home-pix-heading">
+            <h2>A história da Juliana continua<span>...</span></h2>
+            <p>E você pode fazer parte do próximo capítulo<span>...</span></p>
+            <strong>A CURA É A NOSSA ESPERANÇA. SUA AJUDA É BEM-VINDA.</strong>
+          </header>
+          <div className="home-pix-content">
+            <div className="home-pix-qr-wrap">
+              <img src={campaign.pix.qrImage} alt="QR Code Pix da campanha Viva a Vida, Juliana."/>
+              <span>APONTE A CÂMERA DO CELULAR</span>
             </div>
-            <button className="button button-gold" type="button" onClick={copyHomePix}>
-              {pixCopied ? <Check size={16}/> : <Copy size={16}/>}
-              {pixCopied ? "CÓDIGO PIX COPIADO" : "COPIAR CÓDIGO PIX"}
-            </button>
-            <small className="home-pix-security">Antes de confirmar, confira se o beneficiário exibido pelo seu banco é {campaign.pix.beneficiaryDisplayName}.</small>
-          </div>
-          <div className="home-pix-qr-wrap">
-            <img src={campaign.pix.qrImage} alt="QR Code Pix da campanha Viva a Vida, Juliana."/>
-            <span>APONTE A CÂMERA DO CELULAR</span>
+            <div className="home-pix-copy">
+              <SectionLabel>PIX — VALOR LIVRE</SectionLabel>
+              <h3>Faça parte dessa corrente.</h3>
+              <p>Contribua com o valor que estiver ao seu alcance. Cada gesto será recebido com gratidão.</p>
+              <div className="home-pix-beneficiary">
+                <small>RESPONSÁVEL PELO RECEBIMENTO</small>
+                <strong>{campaign.pix.beneficiaryDisplayName}</strong>
+                <span>Pix · valor livre</span>
+              </div>
+              <button className="button button-gold" type="button" onClick={copyHomePix}>
+                {pixCopied ? <Check size={16}/> : <Copy size={16}/>}
+                {pixCopied ? "CÓDIGO PIX COPIADO" : "COPIAR CÓDIGO PIX"}
+              </button>
+              <small className="home-pix-security">Antes de confirmar, confira se o beneficiário exibido pelo seu banco é {campaign.pix.beneficiaryDisplayName}.</small>
+            </div>
           </div>
         </div>
       </section>
