@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  ArrowDown, ArrowLeft, ArrowUpRight, Heart, Copy, Check,
-  Menu, X, MessageCircle, ShieldCheck, BookOpen, Activity
+  ArrowDown, ArrowUpRight, Heart, Copy, Check,
+  Menu, X, MessageCircle, ShieldCheck
 } from "lucide-react";
 import { campaign, storySections, voiceQuotes, campaignNeeds, faithDecision } from "./content";
 
@@ -16,7 +17,7 @@ function getPage(): Page {
   return "home";
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function SectionLabel({ children }: { children: ReactNode }) {
   return <div className="section-label"><span />{children}</div>;
 }
 
@@ -103,7 +104,7 @@ function HomePage() {
             <button
               key={item.title}
               className={active === index ? "milestone milestone-active" : "milestone"}
-              style={{ "--milestone-index": index } as React.CSSProperties}
+              style={{ "--milestone-index": index } as CSSProperties}
               type="button"
               aria-pressed={active === index}
               onClick={() => setActive(index)}
