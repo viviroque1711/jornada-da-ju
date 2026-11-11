@@ -72,6 +72,12 @@ function HomePage() {
   return (
     <>
       <section className="home-hero" id="inicio">
+        <div className="home-hero-media" aria-hidden="true">
+          <video autoPlay muted loop playsInline preload="metadata" poster={campaign.video.poster} aria-label="Juliana em um momento de cuidado pessoal">
+            <source src={campaign.video.src} type="video/mp4"/>
+          </video>
+        </div>
+        <div className="home-hero-overlay" />
         <div className="home-hero-copy">
           <SectionLabel>UMA HISTÓRIA DE FÉ, CORAGEM E VIDA</SectionLabel>
           <h1>Uma história<br/><em>de superação.</em></h1>
@@ -82,12 +88,7 @@ function HomePage() {
             <a className="text-link" href="#/minha-historia">CONHEÇA A JULIANA <ArrowDown size={15}/></a>
           </div>
         </div>
-        <div className="home-hero-media">
-          <video autoPlay muted loop playsInline preload="metadata" poster={campaign.video.poster} aria-label="Juliana em um momento de cuidado pessoal">
-            <source src={campaign.video.src} type="video/mp4"/>
-          </video>
-          <span className="home-video-caption">HÁ VIDA EM CADA MOMENTO QUE AINDA QUERO VIVER.</span>
-        </div>
+        <span className="home-video-caption">HÁ VIDA EM CADA MOMENTO QUE AINDA QUERO VIVER.</span>
         <div className="home-hero-bottom"><span>VIVA A VIDA, JULIANA</span><span>01 / 02</span></div>
       </section>
 
